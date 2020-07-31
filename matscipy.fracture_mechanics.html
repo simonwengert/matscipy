@@ -636,7 +636,7 @@ crack.</p></li>
 
 <dl class="py method">
 <dt id="matscipy.fracture_mechanics.crack.SinclairCrack.arc_length_continuation">
-<code class="sig-name descname">arc_length_continuation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x0</span></em>, <em class="sig-param"><span class="n">x1</span></em>, <em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">ds</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">ftol</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">steps</span><span class="o">=</span><span class="default_value">100</span></em>, <em class="sig-param"><span class="n">continuation</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">traj_interval</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.arc_length_continuation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arc_length_continuation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x0</span></em>, <em class="sig-param"><span class="n">x1</span></em>, <em class="sig-param"><span class="n">N</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">ds</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">ftol</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">direction</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">steps</span><span class="o">=</span><span class="default_value">100</span></em>, <em class="sig-param"><span class="n">continuation</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">traj_file</span><span class="o">=</span><span class="default_value">'x_traj.h5'</span></em>, <em class="sig-param"><span class="n">traj_interval</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">precon</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.arc_length_continuation" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -670,13 +670,18 @@ crack.</p></li>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt id="matscipy.fracture_mechanics.crack.SinclairCrack.get_precon">
+<code class="sig-name descname">get_precon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">F</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_precon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt id="matscipy.fracture_mechanics.crack.SinclairCrack.get_xdot">
 <code class="sig-name descname">get_xdot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x1</span></em>, <em class="sig-param"><span class="n">x2</span></em>, <em class="sig-param"><span class="n">ds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_xdot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.fracture_mechanics.crack.SinclairCrack.optimize">
-<code class="sig-name descname">optimize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ftol</span><span class="o">=</span><span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">steps</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">dump</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.optimize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">optimize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ftol</span><span class="o">=</span><span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">steps</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">dump</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">precon</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">method</span><span class="o">=</span><span class="default_value">'krylov'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.optimize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -696,7 +701,12 @@ crack.</p></li>
 
 <dl class="py method">
 <dt id="matscipy.fracture_mechanics.crack.SinclairCrack.residuals">
-<code class="sig-name descname">residuals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.residuals" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">residuals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.residuals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="matscipy.fracture_mechanics.crack.SinclairCrack.set_atoms">
+<code class="sig-name descname">set_atoms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.set_atoms" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -714,6 +724,11 @@ crack.</p></li>
 <dl class="py method">
 <dt id="matscipy.fracture_mechanics.crack.SinclairCrack.unpack">
 <code class="sig-name descname">unpack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">reshape</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">defaults</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.unpack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="matscipy.fracture_mechanics.crack.SinclairCrack.update_precon">
+<code class="sig-name descname">update_precon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">F</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.SinclairCrack.update_precon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
