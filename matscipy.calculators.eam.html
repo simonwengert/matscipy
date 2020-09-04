@@ -217,7 +217,8 @@ example:</p>
 </pre></div>
 </div>
 <p>The subclass implementation should first call this
-implementation to set the atoms attribute.</p>
+implementation to set the atoms attribute and create any missing
+directories.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -343,7 +344,7 @@ U_\gamma'' g_{\gamma\nu}'g_{\gamma\mu}'
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.eam.calculator.EAM.default_parameters">
-<code class="sig-name descname">default_parameters</code><em class="property"> = {}</em><a class="headerlink" href="#matscipy.calculators.eam.calculator.EAM.default_parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">default_parameters</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#matscipy.calculators.eam.calculator.EAM.default_parameters" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -372,7 +373,7 @@ U_\gamma'' g_{\gamma\nu}'g_{\gamma\mu}'
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.eam.calculator.EAM.implemented_properties">
-<code class="sig-name descname">implemented_properties</code><em class="property"> = ['energy', 'stress', 'forces']</em><a class="headerlink" href="#matscipy.calculators.eam.calculator.EAM.implemented_properties" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">implemented_properties</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = ['energy', 'stress', 'forces']</em><a class="headerlink" href="#matscipy.calculators.eam.calculator.EAM.implemented_properties" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
