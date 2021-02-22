@@ -32,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -162,11 +161,11 @@
 <p>Run calculation on a supercell of the atomic structure.</p>
 <dl class="py class">
 <dt id="matscipy.calculators.supercell_calculator.SupercellCalculator">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.supercell_calculator.</code><code class="sig-name descname">SupercellCalculator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">calc</span></em>, <em class="sig-param"><span class="n">supercell</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.supercell_calculator.</span></code><code class="sig-name descname"><span class="pre">SupercellCalculator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supercell</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.calculator.Calculator</span></code></p>
 <dl class="py method">
 <dt id="matscipy.calculators.supercell_calculator.SupercellCalculator.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span></em>, <em class="sig-param"><span class="n">properties</span></em>, <em class="sig-param"><span class="n">system_changes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.calculate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_changes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do the calculation.</p>
 <dl class="simple">
 <dt>properties: list of str</dt><dd><p>List of what needs to be calculated.  Can be any combination
@@ -198,17 +197,19 @@ directories.</p>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.supercell_calculator.SupercellCalculator.default_parameters">
-<code class="sig-name descname">default_parameters</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.default_parameters" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">default_parameters</span></code><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.default_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default parameters</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.supercell_calculator.SupercellCalculator.implemented_properties">
-<code class="sig-name descname">implemented_properties</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = ['energy', 'stress', 'forces']</em><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.implemented_properties" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">implemented_properties</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['energy',</span> <span class="pre">'stress',</span> <span class="pre">'forces']</span></em><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.implemented_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Properties calculator can handle (energy, forces, …)</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.supercell_calculator.SupercellCalculator.name">
-<code class="sig-name descname">name</code><em class="property"> = 'EAM'</em><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'EAM'</span></em><a class="headerlink" href="#matscipy.calculators.supercell_calculator.SupercellCalculator.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

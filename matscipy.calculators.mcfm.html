@@ -32,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -210,7 +209,7 @@
 <span id="matscipy-calculators-mcfm-calculator-module"></span><h2>matscipy.calculators.mcfm.calculator module<a class="headerlink" href="#module-matscipy.calculators.mcfm.calculator" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.mcfm.calculator.</code><code class="sig-name descname">MultiClusterForceMixingPotential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">classical_calculator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">qm_calculator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">qm_cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forced_qm_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">change_bonds</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">calculate_errors</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">calculation_always_required</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">buffer_hops</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">enable_check_state</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.calculator.</span></code><code class="sig-name descname"><span class="pre">MultiClusterForceMixingPotential</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classical_calculator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_calculator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forced_qm_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculate_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculation_always_required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_check_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.calculator.Calculator</span></code></p>
 <p>Subclass of ASE.Calculator facilitating a support for multiple
 QM clusters. It utilizes the given classical_calculator and qm_calculator to initialize
@@ -224,12 +223,12 @@ all_changes {list} – [‘positions’, ‘numbers’, ‘cell’, ‘pbc’]</
 </dl>
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.all_changes">
-<code class="sig-name descname">all_changes</code><em class="property"> = ['positions', 'numbers', 'cell', 'pbc']</em><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.all_changes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">all_changes</span></code><em class="property"> <span class="pre">=</span> <span class="pre">['positions',</span> <span class="pre">'numbers',</span> <span class="pre">'cell',</span> <span class="pre">'pbc']</span></em><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.all_changes" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.attach_hybrid_data">
-<code class="sig-name descname">attach_hybrid_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_qm_atoms_mask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.attach_hybrid_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">attach_hybrid_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_qm_atoms_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.attach_hybrid_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mark atoms that are treated quantm mmechanically
 for more comprehensive ooutput</p>
 <dl class="field-list simple">
@@ -245,7 +244,7 @@ for more comprehensive ooutput</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">properties</span><span class="o">=</span><span class="default_value">['energy']</span></em>, <em class="sig-param"><span class="n">system_changes</span><span class="o">=</span><span class="default_value">['positions', 'numbers', 'cell', 'pbc']</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.calculate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['energy']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_changes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['positions',</span> <span class="pre">'numbers',</span> <span class="pre">'cell',</span> <span class="pre">'pbc']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate selected properties of the given Atoms object.
 Initially, a classical potential is called to evaluate potential
 energies for each atom and afterwards a qm_cluster object is employed
@@ -273,7 +272,7 @@ forces = classical or qmmm forces depending on whether any atoms are flagged</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.combine_qm_mm_forces">
-<code class="sig-name descname">combine_qm_mm_forces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forces</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_data_list</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.combine_qm_mm_forces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">combine_qm_mm_forces</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster_data_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.combine_qm_mm_forces" title="Permalink to this definition">¶</a></dt>
 <dd><p>This combines QM and MM forces</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -294,7 +293,7 @@ forces = classical or qmmm forces depending on whether any atoms are flagged</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.compute_stress">
-<code class="sig-name descname">compute_stress</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span></em>, <em class="sig-param"><span class="n">forces</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.compute_stress" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">compute_stress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.compute_stress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute total stresses using viral theorem.
 WARNING: only works for non-PBC structures</p>
 <p>Sij = sum_k (m_k v_ik v_jk)/ volume + sum_k (r_ik f_jk)/volume
@@ -322,7 +321,7 @@ and sum_k represents a sum over all atoms</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_errors">
-<code class="sig-name descname">evaluate_errors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">heavy_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">r_force</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_errors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">evaluate_errors</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heavy_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_errors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use the forces and reference forces to get errors on hybrid atom
 force evaluations</p>
 <dl class="field-list simple">
@@ -338,7 +337,7 @@ force evaluations</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_qm_cluster_serial">
-<code class="sig-name descname">evaluate_qm_cluster_serial</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clusterNumber</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_qm_cluster_serial" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">evaluate_qm_cluster_serial</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_qm_cluster_serial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate forces for a single QM cluster given the buffer hops</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -365,12 +364,13 @@ core qm list</p>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.implemented_properties">
-<code class="sig-name descname">implemented_properties</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = ['energy', 'forces', 'potential_energies', 'stress']</em><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.implemented_properties" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">implemented_properties</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['energy',</span> <span class="pre">'forces',</span> <span class="pre">'potential_energies',</span> <span class="pre">'stress']</span></em><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.implemented_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Properties calculator can handle (energy, forces, …)</p>
+</dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.print_message">
-<code class="sig-name descname">print_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">100</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.print_message" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">print_message</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.print_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print a message if the calculators verbosity level is above the
 given threshold</p>
 <p>0 - nothing is printed
@@ -390,7 +390,7 @@ given threshold</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_classical_results">
-<code class="sig-name descname">produce_classical_results</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_classical_results" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">produce_classical_results</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_classical_results" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call the classical potential ot obtain forces, potential energy
 and potential energies per atom</p>
 <dl class="field-list simple">
@@ -410,7 +410,7 @@ and potential energies per atom</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_qm_clusters">
-<code class="sig-name descname">produce_qm_clusters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span></em>, <em class="sig-param"><span class="n">potential_energies</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_qm_clusters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">produce_qm_clusters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">potential_energies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_qm_clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update qm clusters based on potential energies per atom</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -424,7 +424,7 @@ and potential energies per atom</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.set_qm_atoms">
-<code class="sig-name descname">set_qm_atoms</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qm_list</span></em>, <em class="sig-param"><span class="n">atoms</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.set_qm_atoms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_qm_atoms</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qm_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.set_qm_atoms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Force a certian set of clusters for qmmm evaluation,
 If forced_qm_list is assigned, the cluster list is not updated
 throughout the run</p>
@@ -445,12 +445,12 @@ throughout the run</p>
 <span id="matscipy-calculators-mcfm-cluster-data-module"></span><h2>matscipy.calculators.mcfm.cluster_data module<a class="headerlink" href="#module-matscipy.calculators.mcfm.cluster_data" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="matscipy.calculators.mcfm.cluster_data.ClusterData">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.mcfm.cluster_data.</code><code class="sig-name descname">ClusterData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nAtoms</span></em>, <em class="sig-param"><span class="n">mark</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">qm_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">forces</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.cluster_data.</span></code><code class="sig-name descname"><span class="pre">ClusterData</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nAtoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mark</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class for storing cluster data</p>
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.cluster_data.ClusterData.forces">
-<code class="sig-name descname">forces</code><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.forces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">forces</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.forces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Atomic forces</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -461,7 +461,7 @@ throughout the run</p>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.cluster_data.ClusterData.mark">
-<code class="sig-name descname">mark</code><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.mark" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mark</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.mark" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Marks assigning atoms as:</dt><dd><p>1: core QM region
 2: buffer region
@@ -479,7 +479,7 @@ throughout the run</p>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.cluster_data.ClusterData.qm_list">
-<code class="sig-name descname">qm_list</code><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.qm_list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">qm_list</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.qm_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>list of inner QM atoms</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -495,7 +495,7 @@ throughout the run</p>
 <span id="matscipy-calculators-mcfm-qm-cluster-module"></span><h2>matscipy.calculators.mcfm.qm_cluster module<a class="headerlink" href="#module-matscipy.calculators.mcfm.qm_cluster" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.mcfm.qm_cluster.</code><code class="sig-name descname">QMCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">special_atoms_list</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster.</span></code><code class="sig-name descname"><span class="pre">QMCluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">special_atoms_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This is a class responsible for managing the QM clusters in the simulation.</p>
 <blockquote>
@@ -506,7 +506,7 @@ neighbour list</p>
 <p>and contains interface to those classes</p>
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.clustering_module">
-<code class="sig-name descname">clustering_module</code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.clustering_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">clustering_module</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.clustering_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>module responsible for carving a qm cluster</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -517,7 +517,7 @@ neighbour list</p>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.flagging_module">
-<code class="sig-name descname">flagging_module</code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.flagging_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">flagging_module</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.flagging_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>module responsible for flagging atoms</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -528,7 +528,7 @@ neighbour list</p>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.neighbour_list">
-<code class="sig-name descname">neighbour_list</code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.neighbour_list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">neighbour_list</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.neighbour_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>object holding the neighbour list</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -539,7 +539,7 @@ neighbour list</p>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.verbose">
-<code class="sig-name descname">verbose</code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.verbose" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">verbose</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.verbose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set verbosity level</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -550,27 +550,27 @@ neighbour list</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_clustering_module">
-<code class="sig-name descname">attach_clustering_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_clustering_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">attach_clustering_module</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_clustering_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize and attach matscipy.calculators.mcfm.QMClusteringTool
 The function calls the class initializer with given parameters</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_flagging_module">
-<code class="sig-name descname">attach_flagging_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_flagging_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">attach_flagging_module</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_flagging_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize and attach matscipy.calculators.mcfm.QMFlaggingTool
 The function calls the class initializer with given parameters</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_neighbour_list">
-<code class="sig-name descname">attach_neighbour_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">neighbour_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_neighbour_list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">attach_neighbour_list</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbour_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_neighbour_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>attach a neighbour list</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.carve_cluster">
-<code class="sig-name descname">carve_cluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.carve_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">carve_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.carve_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface to
 self.clustering_module.carve_cluster(self,</p>
 <blockquote>
@@ -582,14 +582,14 @@ buffer_hops=10)</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.reset_energized_list">
-<code class="sig-name descname">reset_energized_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.reset_energized_list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">reset_energized_list</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.reset_energized_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset old_energized_atoms list in flaggingModule to facilitate
 MCFM potential warmup</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.mcfm.qm_cluster.QMCluster.update_qm_region">
-<code class="sig-name descname">update_qm_region</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.update_qm_region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">update_qm_region</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.update_qm_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface to
 self.flagging_module.update_qm_region(self,</p>
 <blockquote>

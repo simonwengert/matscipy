@@ -32,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -182,148 +181,148 @@
 <p>Simple pair potential.</p>
 <dl class="py class">
 <dt id="matscipy.calculators.pair_potential.calculator.FeneLJCut">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.pair_potential.calculator.</code><code class="sig-name descname">FeneLJCut</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">K</span></em>, <em class="sig-param"><span class="n">R0</span></em>, <em class="sig-param"><span class="n">epsilon</span></em>, <em class="sig-param"><span class="n">sigma</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.pair_potential.calculator.</span></code><code class="sig-name descname"><span class="pre">FeneLJCut</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Finite extensible nonlinear elastic(FENE) potential for a bead-spring polymer model.
 For the Lennard-Jones interaction a LJ-cut potential is used. Due to choice of the cutoff (rc=2^(1/6) sigma)
 it ensures a continous potential and force at the cutoff.</p>
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.FeneLJCut.derivative">
-<code class="sig-name descname">derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.FeneLJCut.first_derivative">
-<code class="sig-name descname">first_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.first_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">first_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.first_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.FeneLJCut.second_derivative">
-<code class="sig-name descname">second_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.second_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">second_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.second_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJones84">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.pair_potential.calculator.</code><code class="sig-name descname">LennardJones84</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">C1</span></em>, <em class="sig-param"><span class="n">C2</span></em>, <em class="sig-param"><span class="n">C3</span></em>, <em class="sig-param"><span class="n">C4</span></em>, <em class="sig-param"><span class="n">cutoff</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.pair_potential.calculator.</span></code><code class="sig-name descname"><span class="pre">LennardJones84</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Function form of a 8-4 Lennard-Jones potential, used to model the structure of a CuZr.
 Kobayashi, Shinji et. al. “Computer simulation of atomic structure of Cu57Zr43 amorphous alloy.”
 Journal of the Physical Society of Japan 48.4 (1980): 1147-1152.</p>
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJones84.derivative">
-<code class="sig-name descname">derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJones84.first_derivative">
-<code class="sig-name descname">first_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.first_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">first_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.first_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJones84.get_cutoff">
-<code class="sig-name descname">get_cutoff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.get_cutoff" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_cutoff</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.get_cutoff" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJones84.second_derivative">
-<code class="sig-name descname">second_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.second_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">second_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.second_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesCut">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.pair_potential.calculator.</code><code class="sig-name descname">LennardJonesCut</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">epsilon</span></em>, <em class="sig-param"><span class="n">sigma</span></em>, <em class="sig-param"><span class="n">cutoff</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.pair_potential.calculator.</span></code><code class="sig-name descname"><span class="pre">LennardJonesCut</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Functional form for a 12-6 Lennard-Jones potential with a hard cutoff.
 Energy is shifted to zero at cutoff.</p>
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesCut.derivative">
-<code class="sig-name descname">derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesCut.first_derivative">
-<code class="sig-name descname">first_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.first_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">first_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.first_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesCut.get_cutoff">
-<code class="sig-name descname">get_cutoff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.get_cutoff" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_cutoff</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.get_cutoff" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesCut.second_derivative">
-<code class="sig-name descname">second_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.second_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">second_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.second_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesLinear">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.pair_potential.calculator.</code><code class="sig-name descname">LennardJonesLinear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">epsilon</span></em>, <em class="sig-param"><span class="n">sigma</span></em>, <em class="sig-param"><span class="n">cutoff</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.pair_potential.calculator.</span></code><code class="sig-name descname"><span class="pre">LennardJonesLinear</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Function form of a 12-6 Lennard-Jones potential with a soft cutoff
 The energy and the force are shifted at the cutoff.</p>
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesLinear.derivative">
-<code class="sig-name descname">derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesLinear.first_derivative">
-<code class="sig-name descname">first_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.first_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">first_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.first_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesLinear.get_cutoff">
-<code class="sig-name descname">get_cutoff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.get_cutoff" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_cutoff</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.get_cutoff" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesLinear.second_derivative">
-<code class="sig-name descname">second_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.second_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">second_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.second_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.pair_potential.calculator.</code><code class="sig-name descname">LennardJonesQuadratic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">epsilon</span></em>, <em class="sig-param"><span class="n">sigma</span></em>, <em class="sig-param"><span class="n">cutoff</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.pair_potential.calculator.</span></code><code class="sig-name descname"><span class="pre">LennardJonesQuadratic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Functional form for a 12-6 Lennard-Jones potential with a soft cutoff.
 Energy, its first and second derivative are shifted to zero at cutoff.</p>
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.derivative">
-<code class="sig-name descname">derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.first_derivative">
-<code class="sig-name descname">first_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.first_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">first_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.first_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.get_cutoff">
-<code class="sig-name descname">get_cutoff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.get_cutoff" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_cutoff</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.get_cutoff" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.second_derivative">
-<code class="sig-name descname">second_derivative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.second_derivative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">second_derivative</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.second_derivative" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="matscipy.calculators.pair_potential.calculator.PairPotential">
-<em class="property">class </em><code class="sig-prename descclassname">matscipy.calculators.pair_potential.calculator.</code><code class="sig-name descname">PairPotential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">cutoff</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.pair_potential.calculator.</span></code><code class="sig-name descname"><span class="pre">PairPotential</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.calculator.Calculator</span></code></p>
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.PairPotential.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span></em>, <em class="sig-param"><span class="n">properties</span></em>, <em class="sig-param"><span class="n">system_changes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.calculate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_changes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do the calculation.</p>
 <dl class="simple">
 <dt>properties: list of str</dt><dd><p>List of what needs to be calculated.  Can be any combination
@@ -355,7 +354,7 @@ directories.</p>
 
 <dl class="py method">
 <dt id="matscipy.calculators.pair_potential.calculator.PairPotential.calculate_hessian_matrix">
-<code class="sig-name descname">calculate_hessian_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">atoms</span></em>, <em class="sig-param"><span class="n">H_format</span><span class="o">=</span><span class="default_value">'dense'</span></em>, <em class="sig-param"><span class="n">limits</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.calculate_hessian_matrix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">calculate_hessian_matrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dense'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.calculate_hessian_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Hessian matrix for a pair potential.
 For an atomic configuration with N atoms in d dimensions the hessian matrix is a symmetric, hermitian matrix
 with a shape of (d*N,d*N). The matrix is in general a sparse matrix, which consists of dense blocks of shape (d,d), which
@@ -381,17 +380,19 @@ This ensures correct indexing of the data.</p></li>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters">
-<code class="sig-name descname">default_parameters</code><em class="property">: Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></em><em class="property"> = {}</em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">default_parameters</span></code><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default parameters</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.pair_potential.calculator.PairPotential.implemented_properties">
-<code class="sig-name descname">implemented_properties</code><em class="property">: List<span class="p">[</span>str<span class="p">]</span></em><em class="property"> = ['energy', 'stress', 'forces', 'hessian']</em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.implemented_properties" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname"><span class="pre">implemented_properties</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['energy',</span> <span class="pre">'stress',</span> <span class="pre">'forces',</span> <span class="pre">'hessian']</span></em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.implemented_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Properties calculator can handle (energy, forces, …)</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt id="matscipy.calculators.pair_potential.calculator.PairPotential.name">
-<code class="sig-name descname">name</code><em class="property"> = 'PairPotential'</em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'PairPotential'</span></em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
