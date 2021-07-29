@@ -322,7 +322,7 @@ Energy, its first and second derivative are shifted to zero at cutoff.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.pair_potential.calculator.PairPotential">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.pair_potential.calculator.</span></span><span class="sig-name descname"><span class="pre">PairPotential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.calculator.Calculator</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.calculator.MatscipyCalculator</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="matscipy.calculators.pair_potential.calculator.PairPotential.calculate">
 <span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_changes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.calculate" title="Permalink to this definition">¶</a></dt>
@@ -355,24 +355,27 @@ implementation to set the atoms attribute and create any missing
 directories.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters">
+<span class="sig-name descname"><span class="pre">default_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default parameters</p>
+</dd></dl>
+
 <dl class="py method">
-<dt class="sig sig-object py" id="matscipy.calculators.pair_potential.calculator.PairPotential.calculate_hessian_matrix">
-<span class="sig-name descname"><span class="pre">calculate_hessian_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dense'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.calculate_hessian_matrix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.pair_potential.calculator.PairPotential.get_hessian">
+<span class="sig-name descname"><span class="pre">get_hessian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dense'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">divide_by_masses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.get_hessian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the Hessian matrix for a pair potential.
 For an atomic configuration with N atoms in d dimensions the hessian matrix is a symmetric, hermitian matrix
-with a shape of (d*N,d*N). The matrix is in general a sparse matrix, which consists of dense blocks of shape (d,d), which
-are the mixed second derivatives. The result of the derivation for a pair potential can be found in:
-L. Pastewka et. al. “Seamless elastic boundaries for atomistic calculations”, Phys. Ev. B 86, 075459 (2012).</p>
+with a shape of (d*N,d*N). The matrix is in general a sparse matrix, which consists of dense blocks of
+shape (d,d), which are the mixed second derivatives. The result of the derivation for a pair potential can be
+found e.g. in:
+L. Pastewka et. al. “Seamless elastic boundaries for atomistic calculations”, Phys. Rev. B 86, 075459 (2012).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – Atomic configuration in a local or global minima.</p></li>
-<li><p><strong>H_format</strong> (<em>&quot;dense&quot;</em><em> or </em><em>&quot;sparse&quot;</em>) – Output format of the hessian matrix.
-The format “sparse” is only possible if matscipy was build with scipy.</p></li>
-<li><p><strong>limits</strong> (<em>list</em><em> [</em><em>atomID_low</em><em>, </em><em>atomID_up</em><em>]</em>) – Calculate the Hessian matrix only for the given atom IDs.
-If limits=[5,10] the Hessian matrix is computed for atom IDs 5,6,7,8,9 only.
-The Hessian matrix will have the full shape dim(3*N,3*N) where N is the number of atoms.
-This ensures correct indexing of the data.</p></li>
+<li><p><strong>format</strong> (<em>&quot;sparse&quot;</em><em> or </em><em>&quot;neighbour-list&quot;</em>) – Output format of the hessian matrix.</p></li>
+<li><p><strong>divide_by_masses</strong> (<em>bool</em>) – if true return the dynamic matrix else hessian matrix</p></li>
 <li><p><strong>Restrictions</strong> – </p></li>
 <li><p><strong>----------</strong> – </p></li>
 <li><p><strong>systems</strong> (<em>This method is currently only implemented for three dimensional</em>) – </p></li>
@@ -382,14 +385,8 @@ This ensures correct indexing of the data.</p></li>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters">
-<span class="sig-name descname"><span class="pre">default_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default parameters</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="matscipy.calculators.pair_potential.calculator.PairPotential.implemented_properties">
-<span class="sig-name descname"><span class="pre">implemented_properties</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['energy',</span> <span class="pre">'stress',</span> <span class="pre">'forces',</span> <span class="pre">'hessian']</span></em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.implemented_properties" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">implemented_properties</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['energy',</span> <span class="pre">'free_energy',</span> <span class="pre">'stress',</span> <span class="pre">'forces',</span> <span class="pre">'hessian']</span></em><a class="headerlink" href="#matscipy.calculators.pair_potential.calculator.PairPotential.implemented_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Properties calculator can handle (energy, forces, …)</p>
 </dd></dl>
 
