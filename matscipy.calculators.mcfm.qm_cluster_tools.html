@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -187,14 +190,14 @@
 <div class="section" id="module-matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool">
 <span id="matscipy-calculators-mcfm-qm-cluster-tools-base-qm-cluster-tool-module"></span><h2>matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool module<a class="headerlink" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.</span></code><code class="sig-name descname"><span class="pre">BaseQMClusterTool</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.</span></span><span class="sig-name descname"><span class="pre">BaseQMClusterTool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class that hold all the functions common to
 qm clustering objects</p>
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.find_neighbours">
-<code class="sig-name descname"><span class="pre">find_neighbours</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.find_neighbours" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.find_neighbours">
+<span class="sig-name descname"><span class="pre">find_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.find_neighbours" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the neighbours of atom i using self.neighbour_list
 returns a list of [heavy_neighbours, hydrogen_neighbours]</p>
 <dl class="field-list simple">
@@ -215,8 +218,8 @@ returns a list of [heavy_neighbours, hydrogen_neighbours]</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.hydrogenate_cluster">
-<code class="sig-name descname"><span class="pre">hydrogenate_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.hydrogenate_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.hydrogenate_cluster">
+<span class="sig-name descname"><span class="pre">hydrogenate_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cluster</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.hydrogenate_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add neigoburing hydrogens to a cluster composed of heavy ions
 The input should be a set representing heavy ions in a cluster
 This functions operates on sets</p>
@@ -243,14 +246,14 @@ bonds hydrogenated</p></li>
 <div class="section" id="module-matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool">
 <span id="matscipy-calculators-mcfm-qm-cluster-tools-qm-clustering-tools-module"></span><h2>matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tools module<a class="headerlink" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.</span></code><code class="sig-name descname"><span class="pre">QMClusteringTool</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double_bonded_atoms_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.</span></span><span class="sig-name descname"><span class="pre">QMClusteringTool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double_bonded_atoms_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool" title="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool</span></code></a></p>
 <p>This class is responsible for carving and hydrogenating
 a qm cluster</p>
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.carve_cluster">
-<code class="sig-name descname"><span class="pre">carve_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">core_qm_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.carve_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.carve_cluster">
+<span class="sig-name descname"><span class="pre">carve_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">core_qm_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.carve_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a cluster with the list as core atoms, returns an ase.Atoms object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -271,8 +274,8 @@ the inner region and the buffer</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.complete_aromatic_rings">
-<code class="sig-name descname"><span class="pre">complete_aromatic_rings</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_supplementary_terminal_atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.complete_aromatic_rings" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.complete_aromatic_rings">
+<span class="sig-name descname"><span class="pre">complete_aromatic_rings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_supplementary_terminal_atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.complete_aromatic_rings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if a terminal atom is not connected ot two atoms at once
 If it is, add it. This deals with aromatic ring structures</p>
 <dl class="field-list simple">
@@ -296,8 +299,8 @@ Example: last atom in the aromnatic ring</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_buffer_region">
-<code class="sig-name descname"><span class="pre">create_buffer_region</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_buffer_region" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_buffer_region">
+<span class="sig-name descname"><span class="pre">create_buffer_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_buffer_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>GIven a list of active QM atoms, returns a list containing buffer atoms indices</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -320,8 +323,8 @@ atoms in the buffer.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_cluster_from_marks">
-<code class="sig-name descname"><span class="pre">create_cluster_from_marks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_cluster_from_marks" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_cluster_from_marks">
+<span class="sig-name descname"><span class="pre">create_cluster_from_marks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_cluster_from_marks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an ase.Atoms object containing selected atoms from
 a larger structure</p>
 <dl class="field-list simple">
@@ -341,8 +344,8 @@ a larger structure</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.hydrogenate_dangling_bonds">
-<code class="sig-name descname"><span class="pre">hydrogenate_dangling_bonds</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terminal_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.hydrogenate_dangling_bonds" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.hydrogenate_dangling_bonds">
+<span class="sig-name descname"><span class="pre">hydrogenate_dangling_bonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terminal_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.hydrogenate_dangling_bonds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Change atoms that were cut-off into hydrogens</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -357,8 +360,8 @@ a larger structure</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.include_special_atom">
-<code class="sig-name descname"><span class="pre">include_special_atom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specialAtomIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atoms_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.include_special_atom" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.include_special_atom">
+<span class="sig-name descname"><span class="pre">include_special_atom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specialAtomIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminal_atoms_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atoms_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.include_special_atom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a special atom to the buffer and update indexes.
 In case a group of special atoms are specified (special molecule),
 If one of these atoms is in the buffer regios, the rest are also added to it.</p>
@@ -376,8 +379,8 @@ If one of these atoms is in the buffer regios, the rest are also added to it.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.print_message">
-<code class="sig-name descname"><span class="pre">print_message</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.print_message" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.print_message">
+<span class="sig-name descname"><span class="pre">print_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.print_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print a message if the calculators verbosity level is above the
 given threshold</p>
 <dl class="field-list simple">
@@ -391,8 +394,8 @@ given threshold</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_double_bond">
-<code class="sig-name descname"><span class="pre">replace_double_bond</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terminal_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_positions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_double_bond" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_double_bond">
+<span class="sig-name descname"><span class="pre">replace_double_bond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terminal_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_positions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_double_bond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace a cut-off atom with two hydrogens</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -408,8 +411,8 @@ given threshold</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_single_bond">
-<code class="sig-name descname"><span class="pre">replace_single_bond</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terminal_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_positions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_single_bond" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_single_bond">
+<span class="sig-name descname"><span class="pre">replace_single_bond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terminal_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff_atom_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_positions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_single_bond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace a cut-off atom with a single hydrogen</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -430,14 +433,14 @@ given threshold</p>
 <div class="section" id="module-matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool">
 <span id="matscipy-calculators-mcfm-qm-cluster-tools-qm-flagging-tool-module"></span><h2>matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool module<a class="headerlink" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.</span></code><code class="sig-name descname"><span class="pre">QMFlaggingTool</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_flag_potential_energies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_cluster_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_heavy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ema_parameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_cap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_increase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.</span></span><span class="sig-name descname"><span class="pre">QMFlaggingTool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mediator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_flag_potential_energies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_cluster_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_heavy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ema_parameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_cap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_increase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool" title="matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool</span></code></a></p>
 <p>This class is responsible for flagging atoms
 that move out of their equilibrium</p>
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.create_cluster_around_atom">
-<code class="sig-name descname"><span class="pre">create_cluster_around_atom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atom_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hydrogenate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.create_cluster_around_atom" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.create_cluster_around_atom">
+<span class="sig-name descname"><span class="pre">create_cluster_around_atom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atom_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hydrogenate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.create_cluster_around_atom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Carve a cluster around the atom with atom_id
 This function operates on sets and returns a set</p>
 <dl class="field-list simple">
@@ -458,8 +461,8 @@ This function operates on sets and returns a set</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.expand_cluster">
-<code class="sig-name descname"><span class="pre">expand_cluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">special_atoms_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.expand_cluster" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.expand_cluster">
+<span class="sig-name descname"><span class="pre">expand_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">special_atoms_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.expand_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Include extra atoms in the cluster.</p>
 <p>If one of the special atoms is included in one of the clusters,
 add all other special atoms to this cluster</p>
@@ -471,8 +474,8 @@ add all other special atoms to this cluster</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.get_energized_list">
-<code class="sig-name descname"><span class="pre">get_energized_list</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hysteretic_tolerance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.get_energized_list" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.get_energized_list">
+<span class="sig-name descname"><span class="pre">get_energized_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hysteretic_tolerance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.get_energized_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produce a list of atoms that are ot be flagged as a QM region
 based on the properties given in the array according to the
 tolerance given.</p>
@@ -501,8 +504,8 @@ column 2: threshold to stay the QM region</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.join_clusters">
-<code class="sig-name descname"><span class="pre">join_clusters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.join_clusters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.join_clusters">
+<span class="sig-name descname"><span class="pre">join_clusters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.join_clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function will join the clusters if they overlap
 Input is an array of sets each representing individual
 small cluster</p>
@@ -514,8 +517,8 @@ small cluster</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.update_qm_region">
-<code class="sig-name descname"><span class="pre">update_qm_region</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">potential_energies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.update_qm_region" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.update_qm_region">
+<span class="sig-name descname"><span class="pre">update_qm_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">potential_energies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.update_qm_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the QM region while the simulation is running</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -536,8 +539,8 @@ small cluster</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.exponential_moving_average">
-<code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.</span></code><code class="sig-name descname"><span class="pre">exponential_moving_average</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oldset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ema_parameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.exponential_moving_average" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.exponential_moving_average">
+<span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.</span></span><span class="sig-name descname"><span class="pre">exponential_moving_average</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oldset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ema_parameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.exponential_moving_average" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply the exponential moving average to the given array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -551,8 +554,8 @@ small cluster</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.update_avg_property_per_atom">
-<code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.</span></code><code class="sig-name descname"><span class="pre">update_avg_property_per_atom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ema_parameter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.update_avg_property_per_atom" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.update_avg_property_per_atom">
+<span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.</span></span><span class="sig-name descname"><span class="pre">update_avg_property_per_atom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ema_parameter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.update_avg_property_per_atom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the per atom property using running avarages
 and store it in atoms.properties[property_str]</p>
 <dl class="field-list simple">

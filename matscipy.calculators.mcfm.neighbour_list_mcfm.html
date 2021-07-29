@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -183,15 +186,15 @@
 <div class="section" id="module-matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base">
 <span id="matscipy-calculators-mcfm-neighbour-list-mcfm-neighbour-list-base-module"></span><h2>matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base module<a class="headerlink" href="#module-matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.</span></code><code class="sig-name descname"><span class="pre">NeighbourListBase</span></code><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.</span></span><span class="sig-name descname"><span class="pre">NeighbourListBase</span></span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Interface for the neighbour list.
 mcfm module can use any neighbour list object as long
 as it provides the implementation of the two routines below.</p>
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.get_neighbours">
-<code class="sig-name descname"><span class="pre">get_neighbours</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.get_neighbours" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.get_neighbours">
+<span class="sig-name descname"><span class="pre">get_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.get_neighbours" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return neighbors of atom number a.</p>
 <p>A list of indices to neighboring atoms is
 returned.</p>
@@ -209,8 +212,8 @@ returned.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.update">
-<code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make sure the list is up to date. If clled for the first
 time, build the list</p>
 <dl class="field-list simple">
@@ -232,8 +235,8 @@ time, build the list</p>
 <div class="section" id="module-matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm">
 <span id="matscipy-calculators-mcfm-neighbour-list-mcfm-neighbour-list-mcfm-module"></span><h2>matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm module<a class="headerlink" href="#module-matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.</span></code><code class="sig-name descname"><span class="pre">NeighbourListMCFM</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoffs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hysteretic_break_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.</span></span><span class="sig-name descname"><span class="pre">NeighbourListMCFM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoffs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hysteretic_break_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase" title="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_base.NeighbourListBase</span></code></a></p>
 <p>Neighbor list object. Wrapper aroud matscipy.neighbour_list</p>
 <dl class="simple">
@@ -255,8 +258,8 @@ further than cutoff * hysteretic_break_factor</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.do_update">
-<code class="sig-name descname"><span class="pre">do_update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.do_update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.do_update">
+<span class="sig-name descname"><span class="pre">do_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.do_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build the neighbour list based on pairwise distances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -269,8 +272,8 @@ further than cutoff * hysteretic_break_factor</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.get_neighbours">
-<code class="sig-name descname"><span class="pre">get_neighbours</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.get_neighbours" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.get_neighbours">
+<span class="sig-name descname"><span class="pre">get_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.get_neighbours" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return neighbors of atom number a.</p>
 <p>A list of indices to neighboring atoms is
 returned.</p>
@@ -291,8 +294,8 @@ returned.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.update">
-<code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.neighbour_list_mcfm.neighbour_list_mcfm.NeighbourListMCFM.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make sure the list is up to date. If clled for the first
 time, build the list</p>
 <dl class="field-list simple">

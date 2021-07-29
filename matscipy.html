@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +31,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -212,13 +215,13 @@
 <div class="section" id="module-matscipy.angle_distribution">
 <span id="matscipy-angle-distribution-module"></span><h2>matscipy.angle_distribution module<a class="headerlink" href="#module-matscipy.angle_distribution" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.angle_distribution.angle_distribution">
-<code class="sig-prename descclassname"><span class="pre">matscipy.angle_distribution.</span></code><code class="sig-name descname"><span class="pre">angle_distribution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.angle_distribution.angle_distribution" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.angle_distribution.angle_distribution">
+<span class="sig-prename descclassname"><span class="pre">matscipy.angle_distribution.</span></span><span class="sig-name descname"><span class="pre">angle_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.angle_distribution.angle_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute a bond angle distribution from a neighbour list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>j</strong><strong>, </strong><strong>dr</strong> (<em>i</em><em>,</em>) – Neighbour list, including list of distance vectors.</p></li>
+<li><p><strong>dr</strong> (<em>i</em><em>, </em><em>j</em><em>,</em>) – Neighbour list, including list of distance vectors.</p></li>
 <li><p><strong>nbins</strong> (<em>int</em>) – Number of bins for bond angle histogram.</p></li>
 <li><p><strong>cutoff</strong> (<em>float</em><em>, </em><em>optional</em>) – Bond length cutoff, i.e. consider only bonds shorter than this length.</p></li>
 </ul>
@@ -233,15 +236,15 @@
 displacements.
 See: Falk, Langer, Phys. Rev. E 57, 7192 (1998)</p>
 <dl class="py function">
-<dt id="matscipy.atomic_strain.array_inverse">
-<code class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></code><code class="sig-name descname"><span class="pre">array_inverse</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.array_inverse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.atomic_strain.array_inverse">
+<span class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></span><span class="sig-name descname"><span class="pre">array_inverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.array_inverse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute inverse for each matrix in a list of matrices.
 This is faster than calling numpy.linalg.inv for each matrix.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.atomic_strain.atomic_strain">
-<code class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></code><code class="sig-name descname"><span class="pre">atomic_strain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms_old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighbours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.atomic_strain" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.atomic_strain.atomic_strain">
+<span class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></span><span class="sig-name descname"><span class="pre">atomic_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms_old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighbours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.atomic_strain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate deformation gradient tensor and D^2_min measure for non-affine
 displacements.
 See: Falk, Langer, Phys. Rev. B 57, 7192 (1998)</p>
@@ -264,32 +267,32 @@ See: Falk, Langer, Phys. Rev. B 57, 7192 (1998)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.atomic_strain.get_D_square_min">
-<code class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></code><code class="sig-name descname"><span class="pre">get_D_square_min</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms_old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_plus_epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_D_square_min" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.atomic_strain.get_D_square_min">
+<span class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></span><span class="sig-name descname"><span class="pre">get_D_square_min</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms_old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_plus_epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_D_square_min" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the D^2_min norm of Falk and Langer</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.atomic_strain.get_XIJ">
-<code class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></code><code class="sig-name descname"><span class="pre">get_XIJ</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_XIJ" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.atomic_strain.get_XIJ">
+<span class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></span><span class="sig-name descname"><span class="pre">get_XIJ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_XIJ" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the X_{ij} matrix</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.atomic_strain.get_YIJ">
-<code class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></code><code class="sig-name descname"><span class="pre">get_YIJ</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_YIJ" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.atomic_strain.get_YIJ">
+<span class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></span><span class="sig-name descname"><span class="pre">get_YIJ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_YIJ" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the Y_{ij} matrix</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.atomic_strain.get_delta_plus_epsilon">
-<code class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></code><code class="sig-name descname"><span class="pre">get_delta_plus_epsilon</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_delta_plus_epsilon" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.atomic_strain.get_delta_plus_epsilon">
+<span class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></span><span class="sig-name descname"><span class="pre">get_delta_plus_epsilon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_delta_plus_epsilon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate delta_ij+epsilon_ij, i.e. the deformation gradient matrix</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.atomic_strain.get_delta_plus_epsilon_dgesv">
-<code class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></code><code class="sig-name descname"><span class="pre">get_delta_plus_epsilon_dgesv</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_delta_plus_epsilon_dgesv" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.atomic_strain.get_delta_plus_epsilon_dgesv">
+<span class="sig-prename descclassname"><span class="pre">matscipy.atomic_strain.</span></span><span class="sig-name descname"><span class="pre">get_delta_plus_epsilon_dgesv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_now</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.atomic_strain.get_delta_plus_epsilon_dgesv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate delta_ij+epsilon_ij, i.e. the deformation gradient matrix</p>
 </dd></dl>
 
@@ -297,56 +300,56 @@ See: Falk, Langer, Phys. Rev. B 57, 7192 (1998)</p>
 <div class="section" id="module-matscipy.elasticity">
 <span id="matscipy-elasticity-module"></span><h2>matscipy.elasticity module<a class="headerlink" href="#module-matscipy.elasticity" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="matscipy.elasticity.CubicElasticModuli">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">CubicElasticModuli</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C44</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.CubicElasticModuli">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">CubicElasticModuli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C44</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="matscipy.elasticity.CubicElasticModuli.compliance">
-<code class="sig-name descname"><span class="pre">compliance</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.compliance" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.CubicElasticModuli.compliance">
+<span class="sig-name descname"><span class="pre">compliance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.compliance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the compliance coefficients</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.elasticity.CubicElasticModuli.rotate">
-<code class="sig-name descname"><span class="pre">rotate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.rotate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.CubicElasticModuli.rotate">
+<span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.rotate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the rotated stiffness matrix</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.elasticity.CubicElasticModuli.stiffness">
-<code class="sig-name descname"><span class="pre">stiffness</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.stiffness" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.CubicElasticModuli.stiffness">
+<span class="sig-name descname"><span class="pre">stiffness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.stiffness" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the elastic constants</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="matscipy.elasticity.CubicElasticModuli.tol">
-<code class="sig-name descname"><span class="pre">tol</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1e-06</span></em><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.tol" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.CubicElasticModuli.tol">
+<span class="sig-name descname"><span class="pre">tol</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-06</span></em><a class="headerlink" href="#matscipy.elasticity.CubicElasticModuli.tol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.Voigt_6_to_full_3x3_strain">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">Voigt_6_to_full_3x3_strain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strain_vector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6_to_full_3x3_strain" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.Voigt_6_to_full_3x3_strain">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">Voigt_6_to_full_3x3_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strain_vector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6_to_full_3x3_strain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Form a 3x3 strain matrix from a 6 component vector in Voigt notation</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.Voigt_6_to_full_3x3_stress">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">Voigt_6_to_full_3x3_stress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stress_vector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6_to_full_3x3_stress" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.Voigt_6_to_full_3x3_stress">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">Voigt_6_to_full_3x3_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stress_vector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6_to_full_3x3_stress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Form a 3x3 stress matrix from a 6 component vector in Voigt notation</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.Voigt_6x6_to_cubic">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">Voigt_6x6_to_cubic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6x6_to_cubic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.Voigt_6x6_to_cubic">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">Voigt_6x6_to_cubic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6x6_to_cubic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert the Voigt 6x6 representation into the cubic elastic constants
 C11, C12 and C44.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.Voigt_6x6_to_full_3x3x3x3">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">Voigt_6x6_to_full_3x3x3x3</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6x6_to_full_3x3x3x3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.Voigt_6x6_to_full_3x3x3x3">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">Voigt_6x6_to_full_3x3x3x3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.Voigt_6x6_to_full_3x3x3x3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert from the Voigt representation of the stiffness matrix to the full
 3x3x3x3 representation.</p>
 <dl class="field-list simple">
@@ -363,13 +366,13 @@ C11, C12 and C44.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.cubic_to_Voigt_6x6">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">cubic_to_Voigt_6x6</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C44</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.cubic_to_Voigt_6x6" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.cubic_to_Voigt_6x6">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">cubic_to_Voigt_6x6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C44</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.cubic_to_Voigt_6x6" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.elastic_moduli">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">elastic_moduli</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([1,</span> <span class="pre">0,</span> <span class="pre">0])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.elastic_moduli" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.elastic_moduli">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">elastic_moduli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([1,</span> <span class="pre">0,</span> <span class="pre">0])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.elastic_moduli" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate elastic moduli from 6x6 elastic constant matrix C_{ij}.</p>
 <p>The elastic moduli calculated are: Young’s muduli, Poisson’s ratios,
 shear moduli, bulk mudulus and bulk mudulus tensor.</p>
@@ -413,8 +416,8 @@ Elasticity”, Birkh”auser (2005), pp. 71.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.fit_elastic_constants">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">fit_elastic_constants</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'triclinic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.fit_elastic_constants" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.fit_elastic_constants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">fit_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'triclinic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.fit_elastic_constants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute elastic constants by linear regression of stress vs. strain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -459,32 +462,32 @@ Otherwise an array of np.zeros((6,6)) is returned.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.full_3x3_to_Voigt_6_index">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">full_3x3_to_Voigt_6_index</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3_to_Voigt_6_index" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.full_3x3_to_Voigt_6_index">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">full_3x3_to_Voigt_6_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3_to_Voigt_6_index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.full_3x3_to_Voigt_6_strain">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">full_3x3_to_Voigt_6_strain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strain_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3_to_Voigt_6_strain" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.full_3x3_to_Voigt_6_strain">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">full_3x3_to_Voigt_6_strain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strain_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3_to_Voigt_6_strain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Form a 6 component strain vector in Voigt notation from a 3x3 matrix</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.full_3x3_to_Voigt_6_stress">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">full_3x3_to_Voigt_6_stress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stress_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3_to_Voigt_6_stress" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.full_3x3_to_Voigt_6_stress">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">full_3x3_to_Voigt_6_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stress_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3_to_Voigt_6_stress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Form a 6 component stress vector in Voigt notation from a 3x3 matrix</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.full_3x3x3x3_to_Voigt_6x6">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">full_3x3x3x3_to_Voigt_6x6</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3x3x3_to_Voigt_6x6" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.full_3x3x3x3_to_Voigt_6x6">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">full_3x3x3x3_to_Voigt_6x6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.full_3x3x3x3_to_Voigt_6x6" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert from the full 3x3x3x3 representation of the stiffness matrix
 to the representation in Voigt notation. Checks symmetry in that process.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.generate_strained_configs">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">generate_strained_configs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'triclinic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.generate_strained_configs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.generate_strained_configs">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">generate_strained_configs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'triclinic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.generate_strained_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a sequence of strained configurations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -511,13 +514,13 @@ to +delta*N_steps/2.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.invariants">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">invariants</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">s</span></em>, <em class="sig-param"><span class="pre">syy=None</span></em>, <em class="sig-param"><span class="pre">szz=None</span></em>, <em class="sig-param"><span class="pre">syz=None</span></em>, <em class="sig-param"><span class="pre">sxz=None</span></em>, <em class="sig-param"><span class="pre">sxy=None</span></em>, <em class="sig-param"><span class="pre">full_3x3_to_Voigt_6=&lt;function</span> <span class="pre">full_3x3_to_Voigt_6_stress&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.invariants" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.invariants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">invariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">s</span></em>, <em class="sig-param"><span class="pre">syy=None</span></em>, <em class="sig-param"><span class="pre">szz=None</span></em>, <em class="sig-param"><span class="pre">syz=None</span></em>, <em class="sig-param"><span class="pre">sxz=None</span></em>, <em class="sig-param"><span class="pre">sxy=None</span></em>, <em class="sig-param"><span class="pre">full_3x3_to_Voigt_6=&lt;function</span> <span class="pre">full_3x3_to_Voigt_6_stress&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.invariants" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.measure_triclinic_elastic_constants">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">measure_triclinic_elastic_constants</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.measure_triclinic_elastic_constants" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.measure_triclinic_elastic_constants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">measure_triclinic_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.measure_triclinic_elastic_constants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Brute-force measurement of elastic constants for a triclinic (general)
 unit cell.</p>
 <dl class="field-list simple">
@@ -539,8 +542,8 @@ position if set to None.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.poisson_ratio">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">poisson_ratio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.poisson_ratio" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.poisson_ratio">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">poisson_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.poisson_ratio" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>Calculate approximate Poisson ratio</p>
 </div></blockquote>
@@ -553,14 +556,14 @@ with semiconductor devices. J. Appl. Phys., 44, 534 (1973).</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.rotate_cubic_elastic_constants">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">rotate_cubic_elastic_constants</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C44</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.rotate_cubic_elastic_constants" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.rotate_cubic_elastic_constants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">rotate_cubic_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C44</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.rotate_cubic_elastic_constants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return rotated elastic moduli for a cubic crystal given the elastic
 constant in standard C11, C12, C44 notation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>C12</strong><strong>, </strong><strong>C44</strong> (<em>C11</em><em>,</em>) – Cubic elastic moduli.</p></li>
+<li><p><strong>C44</strong> (<em>C11</em><em>, </em><em>C12</em><em>,</em>) – Cubic elastic moduli.</p></li>
 <li><p><strong>A</strong> (<em>array_like</em>) – 3x3 rotation matrix.</p></li>
 </ul>
 </dd>
@@ -574,8 +577,8 @@ constant in standard C11, C12, C44 notation.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.rotate_elastic_constants">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">rotate_elastic_constants</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.rotate_elastic_constants" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.rotate_elastic_constants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">rotate_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.rotate_elastic_constants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return rotated elastic moduli for a general crystal given the elastic
 constant in Voigt notation.</p>
 <dl class="field-list simple">
@@ -595,8 +598,8 @@ constant in Voigt notation.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.elasticity.youngs_modulus">
-<code class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></code><code class="sig-name descname"><span class="pre">youngs_modulus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.youngs_modulus">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">youngs_modulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.youngs_modulus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate approximate Youngs modulus E_l from 6x6 elastic constants matrix C_ij</p>
 <p>This is the modulus for loading in the l direction. For the exact answer, taking
 into account elastic anisotropuy, rotate the C_ij matrix to the correct frame,
@@ -619,8 +622,8 @@ with semiconductor devices. J. Appl. Phys., 44, 534 (1973).</p>
 <div class="section" id="module-matscipy.hydrogenate">
 <span id="matscipy-hydrogenate-module"></span><h2>matscipy.hydrogenate module<a class="headerlink" href="#module-matscipy.hydrogenate" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.hydrogenate.hydrogenate">
-<code class="sig-prename descclassname"><span class="pre">matscipy.hydrogenate.</span></code><code class="sig-name descname"><span class="pre">hydrogenate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bond_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[True,</span> <span class="pre">True,</span> <span class="pre">True]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vacuum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.hydrogenate.hydrogenate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.hydrogenate.hydrogenate">
+<span class="sig-prename descclassname"><span class="pre">matscipy.hydrogenate.</span></span><span class="sig-name descname"><span class="pre">hydrogenate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bond_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[True,</span> <span class="pre">True,</span> <span class="pre">True]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vacuum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.hydrogenate.hydrogenate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hydrogenate a slab of material at its periodic boundary conditions.
 Boundary conditions are turned into nonperiodic.</p>
 <dl class="field-list simple">
@@ -655,76 +658,76 @@ given.</p></li>
 <span id="matscipy-logger-module"></span><h2>matscipy.logger module<a class="headerlink" href="#module-matscipy.logger" title="Permalink to this headline">¶</a></h2>
 <p>Log status to screen.</p>
 <dl class="py class">
-<dt id="matscipy.logger.Logger">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></code><code class="sig-name descname"><span class="pre">Logger</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">logfile=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;</span></em>, <em class="sig-param"><span class="pre">outevery=1</span></em>, <em class="sig-param"><span class="pre">sepevery=10</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></span><span class="sig-name descname"><span class="pre">Logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">logfile=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stdout&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;</span></em>, <em class="sig-param"><span class="pre">outevery=1</span></em>, <em class="sig-param"><span class="pre">sepevery=10</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="matscipy.logger.Logger.flush">
-<code class="sig-name descname"><span class="pre">flush</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.flush" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.flush">
+<span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.flush" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.get_logfile">
-<code class="sig-name descname"><span class="pre">get_logfile</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.get_logfile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.get_logfile">
+<span class="sig-name descname"><span class="pre">get_logfile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.get_logfile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.has_logfile">
-<code class="sig-name descname"><span class="pre">has_logfile</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.has_logfile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.has_logfile">
+<span class="sig-name descname"><span class="pre">has_logfile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.has_logfile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.iteration_finished">
-<code class="sig-name descname"><span class="pre">iteration_finished</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.iteration_finished" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.iteration_finished">
+<span class="sig-name descname"><span class="pre">iteration_finished</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.iteration_finished" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.pr">
-<code class="sig-name descname"><span class="pre">pr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.pr" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.pr">
+<span class="sig-name descname"><span class="pre">pr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.pr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.set_logfile">
-<code class="sig-name descname"><span class="pre">set_logfile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.set_logfile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.set_logfile">
+<span class="sig-name descname"><span class="pre">set_logfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.set_logfile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.set_outevery">
-<code class="sig-name descname"><span class="pre">set_outevery</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outevery</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.set_outevery" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.set_outevery">
+<span class="sig-name descname"><span class="pre">set_outevery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outevery</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.set_outevery" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.st">
-<code class="sig-name descname"><span class="pre">st</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hdr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.st" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.st">
+<span class="sig-name descname"><span class="pre">st</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hdr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_print</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.st" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.logger.Logger.warn">
-<code class="sig-name descname"><span class="pre">warn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.warn" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.Logger.warn">
+<span class="sig-name descname"><span class="pre">warn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.Logger.warn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.logger.flatten">
-<code class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></code><code class="sig-name descname"><span class="pre">flatten</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.flatten" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.flatten">
+<span class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></span><span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.flatten" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.logger.hdr_str">
-<code class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></code><code class="sig-name descname"><span class="pre">hdr_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.hdr_str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.hdr_str">
+<span class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></span><span class="sig-name descname"><span class="pre">hdr_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.hdr_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return header description strings</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.logger.hdrfmt_str">
-<code class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></code><code class="sig-name descname"><span class="pre">hdrfmt_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.hdrfmt_str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.hdrfmt_str">
+<span class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></span><span class="sig-name descname"><span class="pre">hdrfmt_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.hdrfmt_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return header format string for datatype x</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.logger.numfmt_str">
-<code class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></code><code class="sig-name descname"><span class="pre">numfmt_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.numfmt_str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.logger.numfmt_str">
+<span class="sig-prename descclassname"><span class="pre">matscipy.logger.</span></span><span class="sig-name descname"><span class="pre">numfmt_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.logger.numfmt_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return numeric format string for datatype x</p>
 </dd></dl>
 
@@ -732,8 +735,8 @@ given.</p></li>
 <div class="section" id="module-matscipy.neighbours">
 <span id="matscipy-neighbours-module"></span><h2>matscipy.neighbours module<a class="headerlink" href="#module-matscipy.neighbours" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.neighbours.find_common_neighbours">
-<code class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></code><code class="sig-name descname"><span class="pre">find_common_neighbours</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.find_common_neighbours" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.neighbours.find_common_neighbours">
+<span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">find_common_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.find_common_neighbours" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find common neighbors of pairs of atoms</p>
 <p>For each pair <code class="docutils literal notranslate"><span class="pre">(i1,</span> <span class="pre">j1)</span></code> in the neighbor list, find all other pairs
 <code class="docutils literal notranslate"><span class="pre">(i2,</span> <span class="pre">j1)</span></code> which share the same <code class="docutils literal notranslate"><span class="pre">j1</span></code>. This includes <code class="docutils literal notranslate"><span class="pre">(i1,j1)</span></code>
@@ -788,8 +791,8 @@ of rows in the block is equal to the total number of neighbors of <code class="d
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.neighbours.find_indices_of_reversed_pairs">
-<code class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></code><code class="sig-name descname"><span class="pre">find_indices_of_reversed_pairs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_dr_n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.find_indices_of_reversed_pairs" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.neighbours.find_indices_of_reversed_pairs">
+<span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">find_indices_of_reversed_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_dr_n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.find_indices_of_reversed_pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find neighbor list indices where reversed pairs are stored</p>
 <p>Given list of identifiers of neighbor atoms <cite>i_n</cite> and <cite>j_n</cite>,
 determines the list of indices <cite>reverse</cite> into the neighbor list
@@ -818,8 +821,8 @@ However, we do not check this assumption in order to avoid overhead.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.neighbours.mic">
-<code class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></code><code class="sig-name descname"><span class="pre">mic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.mic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.neighbours.mic">
+<span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">mic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.mic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply minimum image convention to an array of distance vectors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -841,8 +844,8 @@ convention.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.neighbours.neighbour_list">
-<code class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></code><code class="sig-name descname"><span class="pre">neighbour_list</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numbers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell_origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.neighbour_list" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.neighbours.neighbour_list">
+<span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">neighbour_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pbc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numbers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell_origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.neighbour_list" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><blockquote>
 <div><p>Compute a neighbor list for an atomic configuration. Atoms outside periodic
@@ -981,8 +984,8 @@ for x in range(3):</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.neighbours.triplet_list">
-<code class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></code><code class="sig-name descname"><span class="pre">triplet_list</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_neighbours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_dr_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.triplet_list" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.neighbours.triplet_list">
+<span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">triplet_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_neighbours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_dr_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.triplet_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute a triplet list for an atomic configuration. The triple list is a
 mask that can be applied to the corresponding neighbour list to mask
 triplet properties.
@@ -1016,8 +1019,8 @@ first_ij = get_jump_indicies(ij_t)</p>
 <div class="section" id="module-matscipy.rings">
 <span id="matscipy-rings-module"></span><h2>matscipy.rings module<a class="headerlink" href="#module-matscipy.rings" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.rings.ring_statistics">
-<code class="sig-prename descclassname"><span class="pre">matscipy.rings.</span></code><code class="sig-name descname"><span class="pre">ring_statistics</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxlength</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.rings.ring_statistics" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.rings.ring_statistics">
+<span class="sig-prename descclassname"><span class="pre">matscipy.rings.</span></span><span class="sig-name descname"><span class="pre">ring_statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxlength</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.rings.ring_statistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute number of shortest path rings in sample.
 See: D.S. Franzblau, Phys. Rev. B 44, 4925 (1991)</p>
 <dl class="field-list simple">
@@ -1042,30 +1045,30 @@ is useful to speed up calculations for large systems.</p></li>
 <div class="section" id="module-matscipy.socketcalc">
 <span id="matscipy-socketcalc-module"></span><h2>matscipy.socketcalc module<a class="headerlink" href="#module-matscipy.socketcalc" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="matscipy.socketcalc.AtomsRequestHandler">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">AtomsRequestHandler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsRequestHandler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsRequestHandler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">AtomsRequestHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsRequestHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">socketserver.StreamRequestHandler</span></code></p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsRequestHandler.handle">
-<code class="sig-name descname"><span class="pre">handle</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsRequestHandler.handle" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsRequestHandler.handle">
+<span class="sig-name descname"><span class="pre">handle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsRequestHandler.handle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="matscipy.socketcalc.AtomsServer">
-<code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">AtomsServer</span></code><a class="headerlink" href="#matscipy.socketcalc.AtomsServer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServer">
+<span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">AtomsServer</span></span><a class="headerlink" href="#matscipy.socketcalc.AtomsServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#matscipy.socketcalc.AtomsServerAsync" title="matscipy.socketcalc.AtomsServerAsync"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.socketcalc.AtomsServerAsync</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.AtomsServerAsync">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">AtomsServerAsync</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">server_address</span></em>, <em class="sig-param"><span class="pre">RequestHandlerClass</span></em>, <em class="sig-param"><span class="pre">clients</span></em>, <em class="sig-param"><span class="pre">bind_and_activate=True</span></em>, <em class="sig-param"><span class="pre">max_attempts=3</span></em>, <em class="sig-param"><span class="pre">bgq=False</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerAsync" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerAsync">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">AtomsServerAsync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">server_address</span></em>, <em class="sig-param"><span class="pre">RequestHandlerClass</span></em>, <em class="sig-param"><span class="pre">clients</span></em>, <em class="sig-param"><span class="pre">bind_and_activate=True</span></em>, <em class="sig-param"><span class="pre">max_attempts=3</span></em>, <em class="sig-param"><span class="pre">bgq=False</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerAsync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.socketcalc.AtomsServerSync" title="matscipy.socketcalc.AtomsServerSync"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.socketcalc.AtomsServerSync</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">socketserver.ThreadingMixIn</span></code></p>
 <p>Asynchronous (threaded) version of AtomsServer</p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerAsync.shutdown">
-<code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerAsync.shutdown" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerAsync.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerAsync.shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops the serve_forever loop.</p>
 <p>Blocks until the loop has finished. This must be called while
 serve_forever() is running in another thread, or it will
@@ -1073,46 +1076,46 @@ deadlock.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerAsync.shutdown_clients">
-<code class="sig-name descname"><span class="pre">shutdown_clients</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerAsync.shutdown_clients" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerAsync.shutdown_clients">
+<span class="sig-name descname"><span class="pre">shutdown_clients</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerAsync.shutdown_clients" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.AtomsServerSync">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">AtomsServerSync</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">server_address</span></em>, <em class="sig-param"><span class="pre">RequestHandlerClass</span></em>, <em class="sig-param"><span class="pre">clients</span></em>, <em class="sig-param"><span class="pre">bind_and_activate=True</span></em>, <em class="sig-param"><span class="pre">max_attempts=3</span></em>, <em class="sig-param"><span class="pre">bgq=False</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">AtomsServerSync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">server_address</span></em>, <em class="sig-param"><span class="pre">RequestHandlerClass</span></em>, <em class="sig-param"><span class="pre">clients</span></em>, <em class="sig-param"><span class="pre">bind_and_activate=True</span></em>, <em class="sig-param"><span class="pre">max_attempts=3</span></em>, <em class="sig-param"><span class="pre">bgq=False</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">socketserver.TCPServer</span></code></p>
 <dl class="py attribute">
-<dt id="matscipy.socketcalc.AtomsServerSync.allow_reuse_address">
-<code class="sig-name descname"><span class="pre">allow_reuse_address</span></code><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.allow_reuse_address" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync.allow_reuse_address">
+<span class="sig-name descname"><span class="pre">allow_reuse_address</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.allow_reuse_address" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerSync.get_results">
-<code class="sig-name descname"><span class="pre">get_results</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.get_results" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync.get_results">
+<span class="sig-name descname"><span class="pre">get_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.get_results" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerSync.join_all">
-<code class="sig-name descname"><span class="pre">join_all</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.join_all" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync.join_all">
+<span class="sig-name descname"><span class="pre">join_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.join_all" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerSync.put">
-<code class="sig-name descname"><span class="pre">put</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.put" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.put" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerSync.server_activate">
-<code class="sig-name descname"><span class="pre">server_activate</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.server_activate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync.server_activate">
+<span class="sig-name descname"><span class="pre">server_activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.server_activate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called by constructor to activate the server.</p>
 <p>May be overridden.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerSync.shutdown">
-<code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.shutdown" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops the serve_forever loop.</p>
 <p>Blocks until the loop has finished. This must be called while
 serve_forever() is running in another thread, or it will
@@ -1120,36 +1123,36 @@ deadlock.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.AtomsServerSync.shutdown_clients">
-<code class="sig-name descname"><span class="pre">shutdown_clients</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.shutdown_clients" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.AtomsServerSync.shutdown_clients">
+<span class="sig-name descname"><span class="pre">shutdown_clients</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.AtomsServerSync.shutdown_clients" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.CastepClient">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">CastepClient</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=1.0,</span> <span class="pre">**castep_args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.CastepClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">CastepClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=1.0,</span> <span class="pre">**castep_args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.socketcalc.QMClient" title="matscipy.socketcalc.QMClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.socketcalc.QMClient</span></code></a></p>
 <p>Subclass of Client for running CASTEP calculations.</p>
 <p>Initial input files are written in .cell and .param
 formats, and subsequent communication is via sockets in REFTRAJ format.</p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.CastepClient.extra_args">
-<code class="sig-name descname"><span class="pre">extra_args</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.extra_args" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.CastepClient.extra_args">
+<span class="sig-name descname"><span class="pre">extra_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.extra_args" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of additional command line arguments to be passed to client</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.CastepClient.postprocess">
-<code class="sig-name descname"><span class="pre">postprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.postprocess" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.CastepClient.postprocess">
+<span class="sig-name descname"><span class="pre">postprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.postprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Post-process results of calculation.</p>
 <p>May be overrriden in subclasses to e.g. reverse sort order
 applied in preprocess().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.CastepClient.preprocess">
-<code class="sig-name descname"><span class="pre">preprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.preprocess" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.CastepClient.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.preprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepare client for a calculation.</p>
 <p>Starts client if this is the first task for it, or schedules a
 restart if new configuration is not compatible with the last
@@ -1161,44 +1164,44 @@ should be returned rather than updating it inplace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.CastepClient.write_input_files">
-<code class="sig-name descname"><span class="pre">write_input_files</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.write_input_files" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.CastepClient.write_input_files">
+<span class="sig-name descname"><span class="pre">write_input_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.CastepClient.write_input_files" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.Client">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">Client</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">Client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Represents a single Client job</p>
 <p>Used by AtomsServer to start, restart and shutdown clients
 running on the Compute Nodes.</p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.extra_args">
-<code class="sig-name descname"><span class="pre">extra_args</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.extra_args" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.extra_args">
+<span class="sig-name descname"><span class="pre">extra_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.extra_args" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of additional command line arguments to be passed to client</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.is_compatible">
-<code class="sig-name descname"><span class="pre">is_compatible</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.is_compatible" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.is_compatible">
+<span class="sig-name descname"><span class="pre">is_compatible</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.is_compatible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if new_at and old_at are compatible.</p>
 <p>Returns True if calculation can be continued, or False
 if client must be restarted before it can process new_at.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.postprocess">
-<code class="sig-name descname"><span class="pre">postprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.postprocess" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.postprocess">
+<span class="sig-name descname"><span class="pre">postprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.postprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Post-process results of calculation.</p>
 <p>May be overrriden in subclasses to e.g. reverse sort order
 applied in preprocess().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.preprocess">
-<code class="sig-name descname"><span class="pre">preprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.preprocess" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.preprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepare client for a calculation.</p>
 <p>Starts client if this is the first task for it, or schedules a
 restart if new configuration is not compatible with the last
@@ -1210,8 +1213,8 @@ should be returned rather than updating it inplace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.shutdown">
-<code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.shutdown" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Request a client to shutdown.</p>
 <p>If block=True, does not return until shutdown is complete.  If
 block=False, waits for the client to shutdown in a new
@@ -1221,23 +1224,23 @@ thread when block=False).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.start">
-<code class="sig-name descname"><span class="pre">start</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.start" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start an individual client.</p>
 <p>Raises RuntimeError if this client is already running.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.start_or_restart">
-<code class="sig-name descname"><span class="pre">start_or_restart</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.start_or_restart" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.start_or_restart">
+<span class="sig-name descname"><span class="pre">start_or_restart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.start_or_restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start or restart a client</p>
 <p>If restart=True, wait for previous client to shutdown first.
 Calls write_input_files() followed by start().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.wait_for_shutdown">
-<code class="sig-name descname"><span class="pre">wait_for_shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.wait_for_shutdown" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.wait_for_shutdown">
+<span class="sig-name descname"><span class="pre">wait_for_shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.wait_for_shutdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Block until a client has shutdown.</p>
 <p>Typically called automatically by shutdown() or
 start_or_restart().</p>
@@ -1252,20 +1255,20 @@ servers’s input_q for this client.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.Client.write_input_files">
-<code class="sig-name descname"><span class="pre">write_input_files</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.write_input_files" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.Client.write_input_files">
+<span class="sig-name descname"><span class="pre">write_input_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.Client.write_input_files" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.QMClient">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">QMClient</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QMClient" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.QMClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">QMClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QMClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.socketcalc.Client" title="matscipy.socketcalc.Client"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.socketcalc.Client</span></code></a></p>
 <p>Abstract subclass of Client for QM calculations</p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.QMClient.is_compatible">
-<code class="sig-name descname"><span class="pre">is_compatible</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QMClient.is_compatible" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.QMClient.is_compatible">
+<span class="sig-name descname"><span class="pre">is_compatible</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QMClient.is_compatible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if new_at and old_at are compatible.</p>
 <p>Returns True if calculation can be continued, or False
 if client must be restarted before it can process new_at.</p>
@@ -1274,29 +1277,29 @@ if client must be restarted before it can process new_at.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.QUIPClient">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">QUIPClient</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001,</span> <span class="pre">param_files=None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QUIPClient" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.QUIPClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">QUIPClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001,</span> <span class="pre">param_files=None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QUIPClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.socketcalc.Client" title="matscipy.socketcalc.Client"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.socketcalc.Client</span></code></a></p>
 <p>Subclass of Client for running QUIP calculations.</p>
 <p>Initial input files are written in extended XYZ format, and
 subsequent communication is via sockets, in either REFTRAJ
 or XYZ format.</p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.QUIPClient.write_input_files">
-<code class="sig-name descname"><span class="pre">write_input_files</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QUIPClient.write_input_files" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.QUIPClient.write_input_files">
+<span class="sig-name descname"><span class="pre">write_input_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.QUIPClient.write_input_files" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.SocketCalculator">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">SocketCalculator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client</span></em>, <em class="sig-param"><span class="pre">ip=None</span></em>, <em class="sig-param"><span class="pre">atoms=None</span></em>, <em class="sig-param"><span class="pre">port=0</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">bgq=False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.SocketCalculator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">SocketCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client</span></em>, <em class="sig-param"><span class="pre">ip=None</span></em>, <em class="sig-param"><span class="pre">atoms=None</span></em>, <em class="sig-param"><span class="pre">port=0</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">bgq=False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.calculator.Calculator</span></code></p>
 <p>ASE-compatible calculator which communicates with remote
 force engines via sockets using a (synchronous) AtomsServer.</p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.SocketCalculator.calculate">
-<code class="sig-name descname"><span class="pre">calculate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_changes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.SocketCalculator.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_changes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do the calculation.</p>
 <dl class="simple">
 <dt>properties: list of str</dt><dd><p>List of what needs to be calculated.  Can be any combination
@@ -1327,47 +1330,47 @@ directories.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="matscipy.socketcalc.SocketCalculator.default_parameters">
-<code class="sig-name descname"><span class="pre">default_parameters</span></code><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.default_parameters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.SocketCalculator.default_parameters">
+<span class="sig-name descname"><span class="pre">default_parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.default_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default parameters</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="matscipy.socketcalc.SocketCalculator.implemented_properties">
-<code class="sig-name descname"><span class="pre">implemented_properties</span></code><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['energy',</span> <span class="pre">'forces',</span> <span class="pre">'stress']</span></em><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.implemented_properties" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.SocketCalculator.implemented_properties">
+<span class="sig-name descname"><span class="pre">implemented_properties</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">=</span> <span class="pre">['energy',</span> <span class="pre">'forces',</span> <span class="pre">'stress']</span></em><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.implemented_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Properties calculator can handle (energy, forces, …)</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="matscipy.socketcalc.SocketCalculator.name">
-<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'SocketCalculator'</span></em><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.name" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.SocketCalculator.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'SocketCalculator'</span></em><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.SocketCalculator.shutdown">
-<code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.shutdown" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.SocketCalculator.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.SocketCalculator.shutdown" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.socketcalc.VaspClient">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">VaspClient</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001,</span> <span class="pre">**vasp_args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.VaspClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">VaspClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">client_id,</span> <span class="pre">exe,</span> <span class="pre">env=None,</span> <span class="pre">npj=1,</span> <span class="pre">ppn=1,</span> <span class="pre">block=None,</span> <span class="pre">corner=None,</span> <span class="pre">shape=None,</span> <span class="pre">jobname='socketcalc',</span> <span class="pre">rundir=None,</span> <span class="pre">fmt='REFTRAJ',</span> <span class="pre">parmode=None,</span> <span class="pre">mpirun='mpirun',</span> <span class="pre">mpirun_args=['-np'],</span> <span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;,</span> <span class="pre">max_pos_diff=1.0,</span> <span class="pre">max_cell_diff=0.001,</span> <span class="pre">**vasp_args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#matscipy.socketcalc.QMClient" title="matscipy.socketcalc.QMClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.socketcalc.QMClient</span></code></a></p>
 <p>Subclass of Client for running VASP calculations.</p>
 <p>Initial input files are written in POSCAR, INCAR, POTCAR and KPOINTS
 formats, and subsequent communicatin is via sockets in REFTRAJ format.</p>
 <dl class="py method">
-<dt id="matscipy.socketcalc.VaspClient.postprocess">
-<code class="sig-name descname"><span class="pre">postprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient.postprocess" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.VaspClient.postprocess">
+<span class="sig-name descname"><span class="pre">postprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient.postprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Post-process results of calculation.</p>
 <p>May be overrriden in subclasses to e.g. reverse sort order
 applied in preprocess().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.VaspClient.preprocess">
-<code class="sig-name descname"><span class="pre">preprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient.preprocess" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.VaspClient.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient.preprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepare client for a calculation.</p>
 <p>Starts client if this is the first task for it, or schedules a
 restart if new configuration is not compatible with the last
@@ -1379,40 +1382,40 @@ should be returned rather than updating it inplace.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.socketcalc.VaspClient.write_input_files">
-<code class="sig-name descname"><span class="pre">write_input_files</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient.write_input_files" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.VaspClient.write_input_files">
+<span class="sig-name descname"><span class="pre">write_input_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.VaspClient.write_input_files" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.socketcalc.pack_atoms_to_reftraj_str">
-<code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">pack_atoms_to_reftraj_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.pack_atoms_to_reftraj_str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.pack_atoms_to_reftraj_str">
+<span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">pack_atoms_to_reftraj_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.pack_atoms_to_reftraj_str" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.socketcalc.pack_atoms_to_xyz_str">
-<code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">pack_atoms_to_xyz_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.pack_atoms_to_xyz_str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.pack_atoms_to_xyz_str">
+<span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">pack_atoms_to_xyz_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.pack_atoms_to_xyz_str" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.socketcalc.pack_results_to_reftraj_output_str">
-<code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">pack_results_to_reftraj_output_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.pack_results_to_reftraj_output_str" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.pack_results_to_reftraj_output_str">
+<span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">pack_results_to_reftraj_output_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">at</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.pack_results_to_reftraj_output_str" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.socketcalc.unpack_reftraj_output_str_to_results">
-<code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">unpack_reftraj_output_str_to_results</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.unpack_reftraj_output_str_to_results" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.unpack_reftraj_output_str_to_results">
+<span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">unpack_reftraj_output_str_to_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.unpack_reftraj_output_str_to_results" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.socketcalc.unpack_reftraj_str_to_atoms">
-<code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">unpack_reftraj_str_to_atoms</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.unpack_reftraj_str_to_atoms" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.unpack_reftraj_str_to_atoms">
+<span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">unpack_reftraj_str_to_atoms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.unpack_reftraj_str_to_atoms" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.socketcalc.unpack_xyz_str_to_results">
-<code class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></code><code class="sig-name descname"><span class="pre">unpack_xyz_str_to_results</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.unpack_xyz_str_to_results" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.socketcalc.unpack_xyz_str_to_results">
+<span class="sig-prename descclassname"><span class="pre">matscipy.socketcalc.</span></span><span class="sig-name descname"><span class="pre">unpack_xyz_str_to_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.socketcalc.unpack_xyz_str_to_results" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -1422,14 +1425,14 @@ should be returned rather than updating it inplace.</p>
 <div class="section" id="module-matscipy.surface">
 <span id="matscipy-surface-module"></span><h2>matscipy.surface module<a class="headerlink" href="#module-matscipy.surface" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.surface.MillerDirection">
-<code class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></code><code class="sig-name descname"><span class="pre">MillerDirection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerDirection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerDirection">
+<span class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></span><span class="sig-name descname"><span class="pre">MillerDirection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerDirection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Special case of <a class="reference internal" href="#matscipy.surface.MillerIndex" title="matscipy.surface.MillerIndex"><code class="xref py py-class docutils literal notranslate"><span class="pre">MillerIndex</span></code></a> with <code class="docutils literal notranslate"><span class="pre">type=&quot;direction&quot;</span></code> (the default)</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="matscipy.surface.MillerIndex">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></code><code class="sig-name descname"><span class="pre">MillerIndex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'direction'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></span><span class="sig-name descname"><span class="pre">MillerIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'direction'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p>
 <p>Representation of a three of four index Miller direction or plane</p>
 <p>A <a class="reference internal" href="#matscipy.surface.MillerIndex" title="matscipy.surface.MillerIndex"><code class="xref py py-class docutils literal notranslate"><span class="pre">MillerIndex</span></code></a> can be constructed from vector or parsed from a string:</p>
@@ -1445,64 +1448,64 @@ should be returned rather than updating it inplace.</p>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt id="matscipy.surface.MillerIndex.all_brackets">
-<code class="sig-name descname"><span class="pre">all_brackets</span></code><em class="property"> <span class="pre">=</span> <span class="pre">['[',</span> <span class="pre">']',</span> <span class="pre">'&lt;',</span> <span class="pre">'&gt;',</span> <span class="pre">'(',</span> <span class="pre">')',</span> <span class="pre">'{',</span> <span class="pre">'}']</span></em><a class="headerlink" href="#matscipy.surface.MillerIndex.all_brackets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.all_brackets">
+<span class="sig-name descname"><span class="pre">all_brackets</span></span><em class="property"> <span class="pre">=</span> <span class="pre">['[',</span> <span class="pre">']',</span> <span class="pre">'&lt;',</span> <span class="pre">'&gt;',</span> <span class="pre">'(',</span> <span class="pre">')',</span> <span class="pre">'{',</span> <span class="pre">'}']</span></em><a class="headerlink" href="#matscipy.surface.MillerIndex.all_brackets" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.angle">
-<code class="sig-name descname"><span class="pre">angle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.angle" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.angle">
+<span class="sig-name descname"><span class="pre">angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.angle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.as3">
-<code class="sig-name descname"><span class="pre">as3</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.as3" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.as3">
+<span class="sig-name descname"><span class="pre">as3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.as3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.as4">
-<code class="sig-name descname"><span class="pre">as4</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.as4" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.as4">
+<span class="sig-name descname"><span class="pre">as4</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.as4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="matscipy.surface.MillerIndex.brackets">
-<code class="sig-name descname"><span class="pre">brackets</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'direction':</span> <span class="pre">'[]',</span> <span class="pre">'direction_family':</span> <span class="pre">'&lt;&gt;',</span> <span class="pre">'plane':</span> <span class="pre">'()',</span> <span class="pre">'plane_family':</span> <span class="pre">'{}'}</span></em><a class="headerlink" href="#matscipy.surface.MillerIndex.brackets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.brackets">
+<span class="sig-name descname"><span class="pre">brackets</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'direction':</span> <span class="pre">'[]',</span> <span class="pre">'direction_family':</span> <span class="pre">'&lt;&gt;',</span> <span class="pre">'plane':</span> <span class="pre">'()',</span> <span class="pre">'plane_family':</span> <span class="pre">'{}'}</span></em><a class="headerlink" href="#matscipy.surface.MillerIndex.brackets" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.cosine">
-<code class="sig-name descname"><span class="pre">cosine</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.cosine" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.cosine">
+<span class="sig-name descname"><span class="pre">cosine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.cosine" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.cross">
-<code class="sig-name descname"><span class="pre">cross</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.cross" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.cross">
+<span class="sig-name descname"><span class="pre">cross</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.cross" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.hat">
-<code class="sig-name descname"><span class="pre">hat</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.hat" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.hat">
+<span class="sig-name descname"><span class="pre">hat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.hat" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.latex">
-<code class="sig-name descname"><span class="pre">latex</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.latex" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.latex">
+<span class="sig-name descname"><span class="pre">latex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.latex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Format this <a class="reference internal" href="#matscipy.surface.MillerIndex" title="matscipy.surface.MillerIndex"><code class="xref py py-class docutils literal notranslate"><span class="pre">MillerIndex</span></code></a> as a LaTeX string</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.norm">
-<code class="sig-name descname"><span class="pre">norm</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.norm" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.norm">
+<span class="sig-name descname"><span class="pre">norm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.norm" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.normalised">
-<code class="sig-name descname"><span class="pre">normalised</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.normalised" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.normalised">
+<span class="sig-name descname"><span class="pre">normalised</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.normalised" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.parse">
-<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">parse</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.parse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.parse">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.parse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a Miller index string</p>
 <dl class="simple">
 <dt>Negative indices can be denoted by:</dt><dd><ol class="arabic simple">
@@ -1518,44 +1521,44 @@ i.e. <code class="docutils literal notranslate"><span class="pre">[001]</span></
 </dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.plane_spacing">
-<code class="sig-name descname"><span class="pre">plane_spacing</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.plane_spacing" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.plane_spacing">
+<span class="sig-name descname"><span class="pre">plane_spacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.plane_spacing" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.simplified">
-<code class="sig-name descname"><span class="pre">simplified</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.simplified" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.simplified">
+<span class="sig-name descname"><span class="pre">simplified</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.simplified" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="matscipy.surface.MillerIndex.simplify">
-<code class="sig-name descname"><span class="pre">simplify</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.simplify" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerIndex.simplify">
+<span class="sig-name descname"><span class="pre">simplify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerIndex.simplify" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simplify by dividing through by greatest common denominator</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.surface.MillerPlane">
-<code class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></code><code class="sig-name descname"><span class="pre">MillerPlane</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerPlane" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.MillerPlane">
+<span class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></span><span class="sig-name descname"><span class="pre">MillerPlane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.MillerPlane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Special case of <a class="reference internal" href="#matscipy.surface.MillerIndex" title="matscipy.surface.MillerIndex"><code class="xref py py-class docutils literal notranslate"><span class="pre">MillerIndex</span></code></a> with <code class="docutils literal notranslate"><span class="pre">type=&quot;plane&quot;</span></code></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.surface.angle_between">
-<code class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></code><code class="sig-name descname"><span class="pre">angle_between</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.angle_between" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.angle_between">
+<span class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></span><span class="sig-name descname"><span class="pre">angle_between</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.angle_between" title="Permalink to this definition">¶</a></dt>
 <dd><p>Angle between crystallographic directions between a=[ijk] and b=[lmn], in radians.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.surface.gcd">
-<code class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></code><code class="sig-name descname"><span class="pre">gcd</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.gcd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.gcd">
+<span class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></span><span class="sig-name descname"><span class="pre">gcd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.gcd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the greatest common divisor of a and b</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.surface.make_unit_slab">
-<code class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></code><code class="sig-name descname"><span class="pre">make_unit_slab</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit_cell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.make_unit_slab" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.surface.make_unit_slab">
+<span class="sig-prename descclassname"><span class="pre">matscipy.surface.</span></span><span class="sig-name descname"><span class="pre">make_unit_slab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit_cell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.surface.make_unit_slab" title="Permalink to this definition">¶</a></dt>
 <dd><p>General purpose unit slab creation routine</p>
 <p>Only tested with cubic unit cells.</p>
 <dl class="simple">
@@ -1582,8 +1585,8 @@ i.e. <code class="docutils literal notranslate"><span class="pre">[001]</span></
 <div class="section" id="module-matscipy">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-matscipy" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.has_parameter">
-<code class="sig-prename descclassname"><span class="pre">matscipy.</span></code><code class="sig-name descname"><span class="pre">has_parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.has_parameter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.has_parameter">
+<span class="sig-prename descclassname"><span class="pre">matscipy.</span></span><span class="sig-name descname"><span class="pre">has_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.has_parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if a parameter has been provided in params.py.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1599,8 +1602,8 @@ i.e. <code class="docutils literal notranslate"><span class="pre">[001]</span></
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.parameter">
-<code class="sig-prename descclassname"><span class="pre">matscipy.</span></code><code class="sig-name descname"><span class="pre">parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name</span></em>, <em class="sig-param"><span class="pre">default=None</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.parameter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.parameter">
+<span class="sig-prename descclassname"><span class="pre">matscipy.</span></span><span class="sig-name descname"><span class="pre">parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name</span></em>, <em class="sig-param"><span class="pre">default=None</span></em>, <em class="sig-param"><span class="pre">logger=&lt;matscipy.logger.Logger</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read parameter from params.py control file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

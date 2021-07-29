@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -172,8 +175,8 @@
 <div class="section" id="module-matscipy.contact_mechanics.DMT">
 <span id="matscipy-contact-mechanics-dmt-module"></span><h2>matscipy.contact_mechanics.DMT module<a class="headerlink" href="#module-matscipy.contact_mechanics.DMT" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.DMT.radius_and_pressure">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.DMT.</span></code><code class="sig-name descname"><span class="pre">radius_and_pressure</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Es</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.DMT.radius_and_pressure" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.DMT.radius_and_pressure">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.DMT.</span></span><span class="sig-name descname"><span class="pre">radius_and_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Es</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.DMT.radius_and_pressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given normal load, sphere radius and contact modulus compute contact radius
 and peak pressure.</p>
 <dl class="field-list simple">
@@ -190,13 +193,13 @@ number nu.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.DMT.surface_displacements">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.DMT.</span></code><code class="sig-name descname"><span class="pre">surface_displacements</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.DMT.surface_displacements" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.DMT.surface_displacements">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.DMT.</span></span><span class="sig-name descname"><span class="pre">surface_displacements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.DMT.surface_displacements" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.DMT.surface_stress">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.DMT.</span></code><code class="sig-name descname"><span class="pre">surface_stress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.DMT.surface_stress" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.DMT.surface_stress">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.DMT.</span></span><span class="sig-name descname"><span class="pre">surface_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.DMT.surface_stress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given distance from the center of the sphere, contact radius and Poisson
 number contact, compute the stress at the surface.</p>
 <dl class="field-list simple">
@@ -222,8 +225,8 @@ number contact, compute the stress at the surface.</p>
 <div class="section" id="module-matscipy.contact_mechanics.Hertz">
 <span id="matscipy-contact-mechanics-hertz-module"></span><h2>matscipy.contact_mechanics.Hertz module<a class="headerlink" href="#module-matscipy.contact_mechanics.Hertz" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.Hertz.centerline_stress">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></code><code class="sig-name descname"><span class="pre">centerline_stress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.centerline_stress" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.Hertz.centerline_stress">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></span><span class="sig-name descname"><span class="pre">centerline_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.centerline_stress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given distance from the center of the sphere, contact radius and Poisson
 number contact, compute the stress at the surface.</p>
 <dl class="field-list simple">
@@ -245,8 +248,8 @@ radius a).</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.Hertz.radius_and_pressure">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></code><code class="sig-name descname"><span class="pre">radius_and_pressure</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Es</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.radius_and_pressure" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.Hertz.radius_and_pressure">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></span><span class="sig-name descname"><span class="pre">radius_and_pressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Es</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.radius_and_pressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given normal load, sphere radius and contact modulus compute contact radius
 and peak pressure.</p>
 <dl class="field-list simple">
@@ -269,8 +272,8 @@ number nu.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.Hertz.stress">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></code><code class="sig-name descname"><span class="pre">stress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.stress" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.Hertz.stress">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></span><span class="sig-name descname"><span class="pre">stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.stress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return components of the stress tensor in the interior of the Hertz solid.
 This is the solution given by: M.T. Huber, Ann. Phys. 319, 153 (1904)</p>
 <p>Note that the stress tensor at any point in the solid has the form below in
@@ -309,8 +312,8 @@ pressure p0).</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.Hertz.stress_Cartesian">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></code><code class="sig-name descname"><span class="pre">stress_Cartesian</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.stress_Cartesian" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.Hertz.stress_Cartesian">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></span><span class="sig-name descname"><span class="pre">stress_Cartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.stress_Cartesian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return components of the stress tensor in the interior of solid due to
 normal Hertz loading.
 This is the solution given by:
@@ -333,8 +336,8 @@ G.M. Hamilton, Proc. Instn. Mech. Engrs. 197C, 53-59 (1983)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.Hertz.stress_for_tangential_loading">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></code><code class="sig-name descname"><span class="pre">stress_for_tangential_loading</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.stress_for_tangential_loading" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.Hertz.stress_for_tangential_loading">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></span><span class="sig-name descname"><span class="pre">stress_for_tangential_loading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.stress_for_tangential_loading" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return components of the stress tensor in the interior of solid due to
 tangential (Hertz) loading.
 This is the solution given by:
@@ -357,8 +360,8 @@ G.M. Hamilton, Proc. Instn. Mech. Engrs. 197C, 53-59 (1983)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.Hertz.surface_displacements">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></code><code class="sig-name descname"><span class="pre">surface_displacements</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.surface_displacements" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.Hertz.surface_displacements">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></span><span class="sig-name descname"><span class="pre">surface_displacements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.surface_displacements" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the displacements at the surface due to an indenting sphere.
 See: K.L. Johnson, Contact Mechanics, p. 61</p>
 <dl class="field-list simple">
@@ -377,8 +380,8 @@ contact radius).</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.Hertz.surface_stress">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></code><code class="sig-name descname"><span class="pre">surface_stress</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.surface_stress" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.Hertz.surface_stress">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.Hertz.</span></span><span class="sig-name descname"><span class="pre">surface_stress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.Hertz.surface_stress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given distance from the center of the sphere, contact radius and Poisson
 number contact, compute the stress at the surface.</p>
 <dl class="field-list simple">
@@ -404,8 +407,8 @@ radius a).</p></li>
 <div class="section" id="module-matscipy.contact_mechanics.JKR">
 <span id="matscipy-contact-mechanics-jkr-module"></span><h2>matscipy.contact_mechanics.JKR module<a class="headerlink" href="#module-matscipy.contact_mechanics.JKR" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.JKR.radius">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.JKR.</span></code><code class="sig-name descname"><span class="pre">radius</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Es</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.JKR.radius" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.JKR.radius">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.JKR.</span></span><span class="sig-name descname"><span class="pre">radius</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Es</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.JKR.radius" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given normal load, sphere radius and contact modulus compute contact radius
 and peak pressure.</p>
 <dl class="field-list simple">
@@ -431,8 +434,8 @@ discrete reciprocal space representation by <cite>real_to_reciprocal_space</cite
 Typically, all <em>nonperiodic</em> kernel return real space Green’s functions,
 all <em>periodic</em> kernel reciprocal space ones.</p>
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.greens_function.min_ccg">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></code><code class="sig-name descname"><span class="pre">min_ccg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gf_q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pentol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.min_ccg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.greens_function.min_ccg">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></span><span class="sig-name descname"><span class="pre">min_ccg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gf_q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pentol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.min_ccg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use a constrained conjugate gradient optimization to find the equilibrium
 configuration deflection of an elastic manifold. The conjugate gradient
 iteration is reset using the steepest descent direction whenever the contact
@@ -459,8 +462,8 @@ Method is described in I.A. Polonsky, L.M. Keer, Wear 231, 206 (1999)</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.greens_function.point_displacement__periodic">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></code><code class="sig-name descname"><span class="pre">point_displacement__periodic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ny</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.point_displacement__periodic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.greens_function.point_displacement__periodic">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></span><span class="sig-name descname"><span class="pre">point_displacement__periodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ny</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.point_displacement__periodic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return reciprocal space stiffness coefficients (i.e. inverse of the Green’s
 function) for a periodic system with contact modulus 2 and Poisson number
 1/2. This gives force as a function of displacement.</p>
@@ -483,8 +486,8 @@ function) for a periodic system with contact modulus 2 and Poisson number
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.greens_function.point_traction__nonperiodic">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></code><code class="sig-name descname"><span class="pre">point_traction__nonperiodic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.point_traction__nonperiodic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.greens_function.point_traction__nonperiodic">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></span><span class="sig-name descname"><span class="pre">point_traction__nonperiodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poisson</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.point_traction__nonperiodic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Real-space representation of Green’s function for the displacement and
 stress in the bulk of a non-periodic linear elastic half-space in response
 to a concentrated surface force. This is the Boussinesq-Cerrutti solution.
@@ -531,8 +534,8 @@ by x,y,z as a function of pressure applied at point 0,0.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.greens_function.real_to_reciprocal_space">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></code><code class="sig-name descname"><span class="pre">real_to_reciprocal_space</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">nx</span></em>, <em class="sig-param"><span class="pre">ny=None</span></em>, <em class="sig-param"><span class="pre">gf=&lt;function</span> <span class="pre">square_pressure__nonperiodic&gt;</span></em>, <em class="sig-param"><span class="pre">coordinates=False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.real_to_reciprocal_space" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.greens_function.real_to_reciprocal_space">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></span><span class="sig-name descname"><span class="pre">real_to_reciprocal_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">nx</span></em>, <em class="sig-param"><span class="pre">ny=None</span></em>, <em class="sig-param"><span class="pre">gf=&lt;function</span> <span class="pre">square_pressure__nonperiodic&gt;</span></em>, <em class="sig-param"><span class="pre">coordinates=False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.real_to_reciprocal_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the reciprocal space representation of a real-space Green’s function
 on an FFT grid.
 Note: If the Green’s function is for the non-periodic (free-bounday)
@@ -561,8 +564,8 @@ application of this method to the electrostatic problem.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="matscipy.contact_mechanics.greens_function.square_pressure__nonperiodic">
-<code class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></code><code class="sig-name descname"><span class="pre">square_pressure__nonperiodic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.square_pressure__nonperiodic" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="matscipy.contact_mechanics.greens_function.square_pressure__nonperiodic">
+<span class="sig-prename descclassname"><span class="pre">matscipy.contact_mechanics.greens_function.</span></span><span class="sig-name descname"><span class="pre">square_pressure__nonperiodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.contact_mechanics.greens_function.square_pressure__nonperiodic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Real-space representation of Green’s function for the normal displacements
 of a non-periodic linear elastic half-space with contact modulus 2 and
 Poisson number 1/2 in response to a uniform pressure applied to a
