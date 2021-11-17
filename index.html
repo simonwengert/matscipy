@@ -1,75 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Matscipy &mdash; matscipy devel documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="#" class="icon icon-home"> matscipy
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 devel
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Matscipy</a><ul>
@@ -101,78 +50,37 @@
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 </div>
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="#">matscipy</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Matscipy</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="matscipy">
-<h1>Matscipy<a class="headerlink" href="#matscipy" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="matscipy">
+<h1>Matscipy<a class="headerlink" href="#matscipy" title="Permalink to this headline"></a></h1>
 <p>This repository contains generic Python materials science tools built
 around the <a class="reference external" href="https://wiki.fysik.dtu.dk/ase/">Atomic Simulation Environment
 (ASE)</a>.</p>
-<div class="section" id="build-status">
-<h2>Build status<a class="headerlink" href="#build-status" title="Permalink to this headline">¶</a></h2>
+<section id="build-status">
+<h2>Build status<a class="headerlink" href="#build-status" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://travis-ci.org/libAtoms/matscipy"><img alt="Build Status" src="https://travis-ci.org/libAtoms/matscipy.svg?branch=master" /></a></p>
 <p>Compilation/installation follows the standard distutils route:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
@@ -183,14 +91,18 @@ around the <a class="reference external" href="https://wiki.fysik.dtu.dk/ase/">A
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CC</span><span class="o">=</span><span class="n">gcc</span> <span class="n">CXX</span><span class="o">=</span><span class="n">g</span><span class="o">++</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
 </pre></div>
 </div>
+<p>If you have a recent version of gcc you may also need to set</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-std=c99&quot;</span>
+</pre></div>
 </div>
-<div class="section" id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>-generated documentation for the
 project can be found <a class="reference external" href="http://libatoms.github.io/matscipy/">here</a>.</p>
-</div>
-<div class="section" id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
 <p>The package requires :</p>
 <ul class="simple">
 <li><p><strong>numpy</strong> - <a class="reference external" href="http://www.numpy.org/">http://www.numpy.org/</a></p></li>
@@ -203,10 +115,10 @@ project can be found <a class="reference external" href="http://libatoms.github.
 <li><p><strong>atomistica</strong> - <a class="reference external" href="https://www.github.com/Atomistica/atomistica">https://www.github.com/Atomistica/atomistica</a></p></li>
 <li><p><strong>chemview</strong> - <a class="reference external" href="https://github.com/gabrielelanaro/chemview">https://github.com/gabrielelanaro/chemview</a></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="contents">
-<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+<section id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline"></a></h1>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -290,58 +202,42 @@ project can be found <a class="reference external" href="http://libatoms.github.
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-</div>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2015, James Kermode, Lars Pastewka.
-
-    </p>
+    <p>&#169; Copyright 2015, James Kermode, Lars Pastewka.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
