@@ -422,6 +422,60 @@ to +delta*N_steps/2.</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="matscipy.elasticity.get_non_affine_contribution_to_elastic_constants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">get_non_affine_contribution_to_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenvalues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenvectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pc_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cg_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'M':</span> <span class="pre">None,</span> <span class="pre">'atol':</span> <span class="pre">1e-05,</span> <span class="pre">'callback':</span> <span class="pre">None,</span> <span class="pre">'maxiter':</span> <span class="pre">None,</span> <span class="pre">'tol':</span> <span class="pre">1e-05,</span> <span class="pre">'x0':</span> <span class="pre">None}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.get_non_affine_contribution_to_elastic_constants" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the correction of non-affine displacements to the elasticity tensor.
+The computation of the occuring inverse of the Hessian matrix is bypassed by using a cg solver.</p>
+<p>If eigenvalues and and eigenvectors are given the inverse of the Hessian can be easily computed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – Atomic configuration in a local or global minima.</p></li>
+<li><p><strong>eigenvalues</strong> (<em>array</em>) – Eigenvalues in ascending order obtained by diagonalization of Hessian matrix.
+If given, use eigenvalues and eigenvectors to compute non-affine contribution.</p></li>
+<li><p><strong>eigenvectors</strong> (<em>array</em>) – Eigenvectors corresponding to eigenvalues.</p></li>
+<li><p><strong>cg_parameters</strong> (<em>dict</em>) – <p>Dictonary for the conjugate-gradient solver.</p>
+<dl class="simple">
+<dt>x0: {array, matrix}</dt><dd><p>Starting guess for the solution.</p>
+</dd>
+<dt>tol/atol: float, optional</dt><dd><p>Tolerances for convergence, norm(residual) &lt;= max(tol*norm(b), atol).</p>
+</dd>
+<dt>maxiter: int</dt><dd><p>Maximum number of iterations. Iteration will stop after maxiter steps even if the specified tolerance has not been achieved.</p>
+</dd>
+<dt>M: {sparse matrix, dense matrix, LinearOperator}</dt><dd><p>Preconditioner for A.</p>
+</dd>
+<dt>callback: function</dt><dd><p>User-supplied function to call after each iteration.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>pc_parameters</strong> (<em>dict</em>) – <p>Dictonary for the incomplete LU decomposition of the Hessian.</p>
+<dl class="simple">
+<dt>A: array_like</dt><dd><p>Sparse matrix to factorize.</p>
+</dd>
+<dt>drop_tol: float</dt><dd><p>Drop tolerance for an incomplete LU decomposition.</p>
+</dd>
+<dt>fill_factor: float</dt><dd><p>Specifies the fill ratio upper bound.</p>
+</dd>
+<dt>drop_rule: str</dt><dd><p>Comma-separated string of drop rules to use.</p>
+</dd>
+<dt>permc_spec: str</dt><dd><p>How to permute the columns of the matrix for sparsity.</p>
+</dd>
+<dt>diag_pivot_thresh: float</dt><dd><p>Threshold used for a diagonal entry to be an acceptable pivot.</p>
+</dd>
+<dt>relax: int</dt><dd><p>Expert option for customizing the degree of relaxing supernodes.</p>
+</dd>
+<dt>panel_size: int</dt><dd><p>Expert option for customizing the panel size.</p>
+</dd>
+<dt>options: dict</dt><dd><p>Dictionary containing additional expert options to SuperLU.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="matscipy.elasticity.invariants">
 <span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">invariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syy=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">szz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sxz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sxy=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_3x3_to_Voigt_6=&lt;function</span> <span class="pre">full_3x3_to_Voigt_6_stress&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.invariants" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
