@@ -422,11 +422,41 @@ to +delta*N_steps/2.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="matscipy.elasticity.get_non_affine_contribution_to_elastic_constants">
-<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">get_non_affine_contribution_to_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenvalues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenvectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pc_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cg_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'M':</span> <span class="pre">None,</span> <span class="pre">'atol':</span> <span class="pre">1e-05,</span> <span class="pre">'callback':</span> <span class="pre">None,</span> <span class="pre">'maxiter':</span> <span class="pre">None,</span> <span class="pre">'tol':</span> <span class="pre">1e-05,</span> <span class="pre">'x0':</span> <span class="pre">None}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.get_non_affine_contribution_to_elastic_constants" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="matscipy.elasticity.invariants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">invariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syy=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">szz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sxz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sxy=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_3x3_to_Voigt_6=&lt;function</span> <span class="pre">full_3x3_to_Voigt_6_stress&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.invariants" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="matscipy.elasticity.measure_triclinic_elastic_constants">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">measure_triclinic_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.measure_triclinic_elastic_constants" title="Permalink to this definition"></a></dt>
+<dd><p>Brute-force measurement of elastic constants for a triclinic (general)
+unit cell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>ase.Atoms</em>) – Atomic configuration.</p></li>
+<li><p><strong>optimizer</strong> (<em>ase.optimizer.*</em>) – Optimizer to use for atomic position. Does not optimize atomic
+position if set to None.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Strain increment for analytical derivatives of stresses.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>C</strong> – 6x6 matrix of the elastic constants in Voigt notation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="matscipy.elasticity.nonaffine_elastic_contribution">
+<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">nonaffine_elastic_contribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenvalues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigenvectors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pc_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cg_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'M':</span> <span class="pre">None,</span> <span class="pre">'atol':</span> <span class="pre">1e-05,</span> <span class="pre">'callback':</span> <span class="pre">None,</span> <span class="pre">'maxiter':</span> <span class="pre">None,</span> <span class="pre">'tol':</span> <span class="pre">1e-05,</span> <span class="pre">'x0':</span> <span class="pre">None}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.nonaffine_elastic_contribution" title="Permalink to this definition"></a></dt>
 <dd><p>Compute the correction of non-affine displacements to the elasticity tensor.
-The computation of the occuring inverse of the Hessian matrix is bypassed by using a cg solver.</p>
-<p>If eigenvalues and and eigenvectors are given the inverse of the Hessian can be easily computed.</p>
+The computation of the occuring inverse of the Hessian matrix is bypassed by
+using a cg solver.</p>
+<p>If eigenvalues and and eigenvectors are given the inverse of the Hessian can
+be easily computed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -471,34 +501,6 @@ If given, use eigenvalues and eigenvectors to compute non-affine contribution.</
 </dl>
 </p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="matscipy.elasticity.invariants">
-<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">invariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syy=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">szz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sxz=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sxy=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_3x3_to_Voigt_6=&lt;function</span> <span class="pre">full_3x3_to_Voigt_6_stress&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.invariants" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="matscipy.elasticity.measure_triclinic_elastic_constants">
-<span class="sig-prename descclassname"><span class="pre">matscipy.elasticity.</span></span><span class="sig-name descname"><span class="pre">measure_triclinic_elastic_constants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.elasticity.measure_triclinic_elastic_constants" title="Permalink to this definition"></a></dt>
-<dd><p>Brute-force measurement of elastic constants for a triclinic (general)
-unit cell.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>ase.Atoms</em>) – Atomic configuration.</p></li>
-<li><p><strong>optimizer</strong> (<em>ase.optimizer.*</em>) – Optimizer to use for atomic position. Does not optimize atomic
-position if set to None.</p></li>
-<li><p><strong>delta</strong> (<em>float</em>) – Strain increment for analytical derivatives of stresses.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>C</strong> – 6x6 matrix of the elastic constants in Voigt notation.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>array_like</p>
 </dd>
 </dl>
 </dd></dl>
@@ -696,6 +698,99 @@ given.</p></li>
 </section>
 <section id="module-matscipy.neighbours">
 <span id="matscipy-neighbours-module"></span><h2>matscipy.neighbours module<a class="headerlink" href="#module-matscipy.neighbours" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="matscipy.neighbours.CutoffNeighbourhood">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">CutoffNeighbourhood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atom_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pair_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.CutoffNeighbourhood" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#matscipy.neighbours.Neighbourhood" title="matscipy.neighbours.Neighbourhood"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.neighbours.Neighbourhood</span></code></a></p>
+<p>Class defining neighbourhood based on proximity.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.CutoffNeighbourhood.get_pairs">
+<span class="sig-name descname"><span class="pre">get_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.CutoffNeighbourhood.get_pairs" title="Permalink to this definition"></a></dt>
+<dd><p>Return pairs and quantities from conventional neighbour list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.CutoffNeighbourhood.get_triplets">
+<span class="sig-name descname"><span class="pre">get_triplets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighbours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.CutoffNeighbourhood.get_triplets" title="Permalink to this definition"></a></dt>
+<dd><p>Return triplets and quantities from conventional neighbour list.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="matscipy.neighbours.MolecularNeighbourhood">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">MolecularNeighbourhood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">molecules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">matscipy.molecules.Molecules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atom_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.MolecularNeighbourhood" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#matscipy.neighbours.Neighbourhood" title="matscipy.neighbours.Neighbourhood"><code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.neighbours.Neighbourhood</span></code></a></p>
+<p>Class defining neighbourhood based on molecular connectivity.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.MolecularNeighbourhood.complete_connectivity">
+<span class="sig-name descname"><span class="pre">complete_connectivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typeoffset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.MolecularNeighbourhood.complete_connectivity" title="Permalink to this definition"></a></dt>
+<dd><p>Add angles to pair connectivity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.MolecularNeighbourhood.double_connectivity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">double_connectivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connectivity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#matscipy.neighbours.MolecularNeighbourhood.double_connectivity" title="Permalink to this definition"></a></dt>
+<dd><p>Sort and stack connectivity + reverse connectivity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.MolecularNeighbourhood.get_pairs">
+<span class="sig-name descname"><span class="pre">get_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.MolecularNeighbourhood.get_pairs" title="Permalink to this definition"></a></dt>
+<dd><p>Return pairs and quantities from connectivities.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.MolecularNeighbourhood.get_triplets">
+<span class="sig-name descname"><span class="pre">get_triplets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighbours</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.MolecularNeighbourhood.get_triplets" title="Permalink to this definition"></a></dt>
+<dd><p>Return triplets and quantities from connectivities.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matscipy.neighbours.MolecularNeighbourhood.molecules">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">molecules</span></span><a class="headerlink" href="#matscipy.neighbours.MolecularNeighbourhood.molecules" title="Permalink to this definition"></a></dt>
+<dd><p>Molecules instance that defines neighbourhood.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matscipy.neighbours.MolecularNeighbourhood.pair_types">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pair_types</span></span><a class="headerlink" href="#matscipy.neighbours.MolecularNeighbourhood.pair_types" title="Permalink to this definition"></a></dt>
+<dd><p>Map atom types to pair types.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="matscipy.neighbours.Neighbourhood">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">Neighbourhood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atom_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.Neighbourhood" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Abstract class defining a neighbourhood of atoms (pairs, triplets).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.Neighbourhood.compute_distances">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">compute_distances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#matscipy.neighbours.Neighbourhood.compute_distances" title="Permalink to this definition"></a></dt>
+<dd><p>Return distances and vectors for connectivity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.Neighbourhood.get_pairs">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.Neighbourhood.get_pairs" title="Permalink to this definition"></a></dt>
+<dd><p>Return requested data on pairs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.Neighbourhood.get_triplets">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_triplets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.Neighbourhood.get_triplets" title="Permalink to this definition"></a></dt>
+<dd><p>Return requested data on triplets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matscipy.neighbours.Neighbourhood.make_result">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">make_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accepted_quantities</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#matscipy.neighbours.Neighbourhood.make_result" title="Permalink to this definition"></a></dt>
+<dd><p>Construct result list.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="matscipy.neighbours.find_common_neighbours">
 <span class="sig-prename descclassname"><span class="pre">matscipy.neighbours.</span></span><span class="sig-name descname"><span class="pre">find_common_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.neighbours.find_common_neighbours" title="Permalink to this definition"></a></dt>
