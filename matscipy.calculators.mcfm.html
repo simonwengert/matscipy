@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -75,9 +76,9 @@
            <div itemprop="articleBody">
              
   <section id="module-matscipy.calculators.mcfm">
-<span id="matscipy-calculators-mcfm-package"></span><h1>matscipy.calculators.mcfm package<a class="headerlink" href="#module-matscipy.calculators.mcfm" title="Permalink to this headline"></a></h1>
+<span id="matscipy-calculators-mcfm-package"></span><h1>matscipy.calculators.mcfm package<a class="headerlink" href="#module-matscipy.calculators.mcfm" title="Permalink to this heading"></a></h1>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline"></a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -97,7 +98,7 @@
 </table>
 </section>
 <section id="packages">
-<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline"></a></h2>
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -117,11 +118,11 @@
 </table>
 </section>
 <section id="module-matscipy.calculators.mcfm.calculator">
-<span id="matscipy-calculators-mcfm-calculator-module"></span><h2>matscipy.calculators.mcfm.calculator module<a class="headerlink" href="#module-matscipy.calculators.mcfm.calculator" title="Permalink to this headline"></a></h2>
+<span id="matscipy-calculators-mcfm-calculator-module"></span><h2>matscipy.calculators.mcfm.calculator module<a class="headerlink" href="#module-matscipy.calculators.mcfm.calculator" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.calculator.</span></span><span class="sig-name descname"><span class="pre">MultiClusterForceMixingPotential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classical_calculator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_calculator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forced_qm_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculate_errors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculation_always_required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_hops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_check_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.calculator.Calculator</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Calculator</span></code></p>
 <p>Subclass of ASE.Calculator facilitating a support for multiple
 QM clusters. It utilizes the given classical_calculator and qm_calculator to initialize
 an instace of ForceMixingPotential</p>
@@ -353,7 +354,7 @@ throughout the run</p>
 
 </section>
 <section id="module-matscipy.calculators.mcfm.cluster_data">
-<span id="matscipy-calculators-mcfm-cluster-data-module"></span><h2>matscipy.calculators.mcfm.cluster_data module<a class="headerlink" href="#module-matscipy.calculators.mcfm.cluster_data" title="Permalink to this headline"></a></h2>
+<span id="matscipy-calculators-mcfm-cluster-data-module"></span><h2>matscipy.calculators.mcfm.cluster_data module<a class="headerlink" href="#module-matscipy.calculators.mcfm.cluster_data" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.mcfm.cluster_data.ClusterData">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.cluster_data.</span></span><span class="sig-name descname"><span class="pre">ClusterData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nAtoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mark</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.cluster_data.ClusterData" title="Permalink to this definition"></a></dt>
@@ -403,7 +404,7 @@ throughout the run</p>
 
 </section>
 <section id="module-matscipy.calculators.mcfm.qm_cluster">
-<span id="matscipy-calculators-mcfm-qm-cluster-module"></span><h2>matscipy.calculators.mcfm.qm_cluster module<a class="headerlink" href="#module-matscipy.calculators.mcfm.qm_cluster" title="Permalink to this headline"></a></h2>
+<span id="matscipy-calculators-mcfm-qm-cluster-module"></span><h2>matscipy.calculators.mcfm.qm_cluster module<a class="headerlink" href="#module-matscipy.calculators.mcfm.qm_cluster" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.mcfm.qm_cluster.QMCluster">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.mcfm.qm_cluster.</span></span><span class="sig-name descname"><span class="pre">QMCluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">special_atoms_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster" title="Permalink to this definition"></a></dt>

@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -73,9 +74,9 @@
            <div itemprop="articleBody">
              
   <section id="module-matscipy.calculators.manybody">
-<span id="matscipy-calculators-manybody-package"></span><h1>matscipy.calculators.manybody package<a class="headerlink" href="#module-matscipy.calculators.manybody" title="Permalink to this headline"></a></h1>
+<span id="matscipy-calculators-manybody-package"></span><h1>matscipy.calculators.manybody package<a class="headerlink" href="#module-matscipy.calculators.manybody" title="Permalink to this heading"></a></h1>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline"></a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -89,12 +90,12 @@
 </table>
 </section>
 <section id="module-matscipy.calculators.manybody.explicit_forms.harmonic">
-<span id="matscipy-calculators-manybody-explicit-forms"></span><h2>matscipy.calculators.manybody.explicit_forms<a class="headerlink" href="#module-matscipy.calculators.manybody.explicit_forms.harmonic" title="Permalink to this headline"></a></h2>
+<span id="matscipy-calculators-manybody-explicit-forms"></span><h2>matscipy.calculators.manybody.explicit_forms<a class="headerlink" href="#module-matscipy.calculators.manybody.explicit_forms.harmonic" title="Permalink to this heading"></a></h2>
 <p>Harmonic potentials for bonds and triplets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.manybody.explicit_forms.harmonic.</span></span><span class="sig-name descname"><span class="pre">HarmonicAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.manybody.calculator.NiceManybody.G</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.manybody.explicit_forms.harmonic.</span></span><span class="sig-name descname"><span class="pre">HarmonicAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">G</span></code></p>
 <p>Defines a harmonic angle potential.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__abstractmethods__">
@@ -120,7 +121,7 @@ G(\vec{u}, \vec{v}) &amp; = h(F(\vec{u}, \vec{v})))\end{split}\]</div>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ase.atoms.Atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Initialize with equilibrium angle and stiffness.</p>
 <p>Note: atoms are needed because mics are calculated for triplet
 distances. This will be removed once G is redefined to take triplet
@@ -200,7 +201,7 @@ to the reader :P .</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.manybody.explicit_forms.harmonic.</span></span><span class="sig-name descname"><span class="pre">HarmonicBond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.manybody.calculator.NiceManybody.F</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">F</span></code></p>
 <p>Defines a harmonic bond.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond.__abstractmethods__">
@@ -243,7 +244,7 @@ to the reader :P .</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.manybody.explicit_forms.harmonic.</span></span><span class="sig-name descname"><span class="pre">ZeroPair</span></span><a class="headerlink" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.manybody.calculator.NiceManybody.G</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">G</span></code></p>
 <p>Defines a non-interacting pair potential.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair.__abstractmethods__">
@@ -278,7 +279,7 @@ to the reader :P .</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.calculators.manybody.explicit_forms.harmonic.</span></span><span class="sig-name descname"><span class="pre">ZeroTriplet</span></span><a class="headerlink" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matscipy.calculators.manybody.calculator.NiceManybody.G</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">G</span></code></p>
 <p>Defines a non-interacting triplet potential.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet.__abstractmethods__">

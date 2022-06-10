@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -78,12 +79,12 @@
            <div itemprop="articleBody">
              
   <section id="matscipy-fracture-mechanics-package">
-<h1>matscipy.fracture_mechanics package<a class="headerlink" href="#matscipy-fracture-mechanics-package" title="Permalink to this headline"></a></h1>
+<h1>matscipy.fracture_mechanics package<a class="headerlink" href="#matscipy-fracture-mechanics-package" title="Permalink to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-matscipy.fracture_mechanics.clusters">
-<span id="matscipy-fracture-mechanics-clusters-module"></span><h2>matscipy.fracture_mechanics.clusters module<a class="headerlink" href="#module-matscipy.fracture_mechanics.clusters" title="Permalink to this headline"></a></h2>
+<span id="matscipy-fracture-mechanics-clusters-module"></span><h2>matscipy.fracture_mechanics.clusters module<a class="headerlink" href="#module-matscipy.fracture_mechanics.clusters" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="matscipy.fracture_mechanics.clusters.bcc">
 <span class="sig-prename descclassname"><span class="pre">matscipy.fracture_mechanics.clusters.</span></span><span class="sig-name descname"><span class="pre">bcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.clusters.bcc" title="Permalink to this definition"></a></dt>
@@ -121,7 +122,7 @@
 
 </section>
 <section id="module-matscipy.fracture_mechanics.crack">
-<span id="matscipy-fracture-mechanics-crack-module"></span><h2>matscipy.fracture_mechanics.crack module<a class="headerlink" href="#module-matscipy.fracture_mechanics.crack" title="Permalink to this headline"></a></h2>
+<span id="matscipy-fracture-mechanics-crack-module"></span><h2>matscipy.fracture_mechanics.crack module<a class="headerlink" href="#module-matscipy.fracture_mechanics.crack" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.fracture_mechanics.crack.ConstantStrainRate">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.fracture_mechanics.crack.</span></span><span class="sig-name descname"><span class="pre">ConstantStrainRate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orig_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_strain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.crack.ConstantStrainRate" title="Permalink to this definition"></a></dt>
@@ -954,7 +955,7 @@ parameters.</p>
 
 </section>
 <section id="module-matscipy.fracture_mechanics.crackpathsel">
-<span id="matscipy-fracture-mechanics-crackpathsel-module"></span><h2>matscipy.fracture_mechanics.crackpathsel module<a class="headerlink" href="#module-matscipy.fracture_mechanics.crackpathsel" title="Permalink to this headline"></a></h2>
+<span id="matscipy-fracture-mechanics-crackpathsel-module"></span><h2>matscipy.fracture_mechanics.crackpathsel module<a class="headerlink" href="#module-matscipy.fracture_mechanics.crackpathsel" title="Permalink to this heading"></a></h2>
 <dl>
 <dt>function coordination(r, cutoff, transition_width)</dt><dd><dl class="simple">
 <dt>if r &gt; cutoff</dt><dd><p>f =  0.0
@@ -1055,7 +1056,7 @@ f</p>
 <p>end</p>
 </section>
 <section id="module-matscipy.fracture_mechanics.energy_release">
-<span id="matscipy-fracture-mechanics-energy-release-module"></span><h2>matscipy.fracture_mechanics.energy_release module<a class="headerlink" href="#module-matscipy.fracture_mechanics.energy_release" title="Permalink to this headline"></a></h2>
+<span id="matscipy-fracture-mechanics-energy-release-module"></span><h2>matscipy.fracture_mechanics.energy_release module<a class="headerlink" href="#module-matscipy.fracture_mechanics.energy_release" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="matscipy.fracture_mechanics.energy_release.J_integral">
 <span class="sig-prename descclassname"><span class="pre">matscipy.fracture_mechanics.energy_release.</span></span><span class="sig-name descname"><span class="pre">J_integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformation_gradient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.energy_release.J_integral" title="Permalink to this definition"></a></dt>
@@ -1090,11 +1091,11 @@ and r2 from the crack tip.</p></li>
 
 </section>
 <section id="module-matscipy.fracture_mechanics.idealbrittlesolid">
-<span id="matscipy-fracture-mechanics-idealbrittlesolid-module"></span><h2>matscipy.fracture_mechanics.idealbrittlesolid module<a class="headerlink" href="#module-matscipy.fracture_mechanics.idealbrittlesolid" title="Permalink to this headline"></a></h2>
+<span id="matscipy-fracture-mechanics-idealbrittlesolid-module"></span><h2>matscipy.fracture_mechanics.idealbrittlesolid module<a class="headerlink" href="#module-matscipy.fracture_mechanics.idealbrittlesolid" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matscipy.fracture_mechanics.idealbrittlesolid.</span></span><span class="sig-name descname"><span class="pre">IdealBrittleSolid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.calculator.Calculator</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Calculator</span></code></p>
 <p>Implementation of force field for an ideal brittle solid</p>
 <p>Described in Marder, Int. J. Fract. 130, 517-555 (2004)</p>
 <dl class="py method">
@@ -1208,7 +1209,7 @@ plane.</p>
 
 </section>
 <section id="module-matscipy.fracture_mechanics">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-matscipy.fracture_mechanics" title="Permalink to this headline"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-matscipy.fracture_mechanics" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 
