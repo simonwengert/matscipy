@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -44,9 +45,49 @@
 <li><a class="reference internal" href="#">matscipy.calculators.mcfm package</a><ul>
 <li><a class="reference internal" href="#modules">Modules</a></li>
 <li><a class="reference internal" href="#packages">Packages</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.calculator">matscipy.calculators.mcfm.calculator module</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.cluster_data">matscipy.calculators.mcfm.cluster_data module</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster">matscipy.calculators.mcfm.qm_cluster module</a></li>
+<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.calculator">matscipy.calculators.mcfm.calculator module</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.all_changes"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.all_changes</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.attach_hybrid_data"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.attach_hybrid_data()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.calculate"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.calculate()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.combine_qm_mm_forces"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.combine_qm_mm_forces()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.compute_stress"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.compute_stress()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_errors"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.evaluate_errors()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.evaluate_qm_cluster_serial"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.evaluate_qm_cluster_serial()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.implemented_properties"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.implemented_properties</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.print_message"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.print_message()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_classical_results"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.produce_classical_results()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.produce_qm_clusters"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.produce_qm_clusters()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.calculator.MultiClusterForceMixingPotential.set_qm_atoms"><code class="docutils literal notranslate"><span class="pre">MultiClusterForceMixingPotential.set_qm_atoms()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.cluster_data">matscipy.calculators.mcfm.cluster_data module</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.cluster_data.ClusterData"><code class="docutils literal notranslate"><span class="pre">ClusterData</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.forces"><code class="docutils literal notranslate"><span class="pre">ClusterData.forces</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.mark"><code class="docutils literal notranslate"><span class="pre">ClusterData.mark</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.cluster_data.ClusterData.qm_list"><code class="docutils literal notranslate"><span class="pre">ClusterData.qm_list</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster">matscipy.calculators.mcfm.qm_cluster module</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster"><code class="docutils literal notranslate"><span class="pre">QMCluster</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.clustering_module"><code class="docutils literal notranslate"><span class="pre">QMCluster.clustering_module</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.flagging_module"><code class="docutils literal notranslate"><span class="pre">QMCluster.flagging_module</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.neighbour_list"><code class="docutils literal notranslate"><span class="pre">QMCluster.neighbour_list</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.verbose"><code class="docutils literal notranslate"><span class="pre">QMCluster.verbose</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_clustering_module"><code class="docutils literal notranslate"><span class="pre">QMCluster.attach_clustering_module()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_flagging_module"><code class="docutils literal notranslate"><span class="pre">QMCluster.attach_flagging_module()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.attach_neighbour_list"><code class="docutils literal notranslate"><span class="pre">QMCluster.attach_neighbour_list()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.carve_cluster"><code class="docutils literal notranslate"><span class="pre">QMCluster.carve_cluster()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.reset_energized_list"><code class="docutils literal notranslate"><span class="pre">QMCluster.reset_energized_list()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster.QMCluster.update_qm_region"><code class="docutils literal notranslate"><span class="pre">QMCluster.update_qm_region()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -148,7 +189,7 @@ for more comprehensive ooutput</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atoms</strong> (<em>ASE.atoms</em>) – atoms object</p></li>
 <li><p><strong>full_qm_atoms_mask</strong> (<em>list</em>) – list of all qm atoms</p></li>
-<li><p><strong>cluster_data_list</strong> (<em>list of matscipy.calculators.mcfm.ClusterData</em>) – information about the clusters</p></li>
+<li><p><strong>cluster_data_list</strong> (<em>list</em><em> of </em><em>matscipy.calculators.mcfm.ClusterData</em>) – information about the clusters</p></li>
 </ul>
 </dd>
 </dl>
@@ -191,7 +232,7 @@ forces = classical or qmmm forces depending on whether any atoms are flagged</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atoms</strong> (<em>ASE.atoms</em>) – atoms object</p></li>
 <li><p><strong>forces</strong> (<em>np.array</em>) – atomic forces</p></li>
-<li><p><strong>cluster_data_list</strong> (<em>list of matscipy.calculators.mcfm.ClusterData</em>) – information about the clusters</p></li>
+<li><p><strong>cluster_data_list</strong> (<em>list</em><em> of </em><em>matscipy.calculators.mcfm.ClusterData</em>) – information about the clusters</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -43,9 +44,42 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">matscipy.calculators.mcfm.qm_cluster_tools package</a><ul>
 <li><a class="reference internal" href="#modules">Modules</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool">matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool module</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool">matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tools module</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool module</a></li>
+<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool">matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool module</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool"><code class="docutils literal notranslate"><span class="pre">BaseQMClusterTool</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.find_neighbours"><code class="docutils literal notranslate"><span class="pre">BaseQMClusterTool.find_neighbours()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.base_qm_cluster_tool.BaseQMClusterTool.hydrogenate_cluster"><code class="docutils literal notranslate"><span class="pre">BaseQMClusterTool.hydrogenate_cluster()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool">matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tools module</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.carve_cluster"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.carve_cluster()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.complete_aromatic_rings"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.complete_aromatic_rings()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_buffer_region"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.create_buffer_region()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.create_cluster_from_marks"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.create_cluster_from_marks()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.hydrogenate_dangling_bonds"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.hydrogenate_dangling_bonds()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.include_special_atom"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.include_special_atom()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.print_message"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.print_message()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_double_bond"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.replace_double_bond()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_clustering_tool.QMClusteringTool.replace_single_bond"><code class="docutils literal notranslate"><span class="pre">QMClusteringTool.replace_single_bond()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool">matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool module</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool"><code class="docutils literal notranslate"><span class="pre">QMFlaggingTool</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.create_cluster_around_atom"><code class="docutils literal notranslate"><span class="pre">QMFlaggingTool.create_cluster_around_atom()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.expand_cluster"><code class="docutils literal notranslate"><span class="pre">QMFlaggingTool.expand_cluster()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.get_energized_list"><code class="docutils literal notranslate"><span class="pre">QMFlaggingTool.get_energized_list()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.join_clusters"><code class="docutils literal notranslate"><span class="pre">QMFlaggingTool.join_clusters()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.QMFlaggingTool.update_qm_region"><code class="docutils literal notranslate"><span class="pre">QMFlaggingTool.update_qm_region()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.exponential_moving_average"><code class="docutils literal notranslate"><span class="pre">exponential_moving_average()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.mcfm.qm_cluster_tools.qm_flagging_tool.update_avg_property_per_atom"><code class="docutils literal notranslate"><span class="pre">update_avg_property_per_atom()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -168,7 +202,7 @@ a qm cluster</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
-<li><p><strong>core_qm_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – Indexes of atoms in the core QM region</p></li>
+<li><p><strong>core_qm_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – Indexes of atoms in the core QM region</p></li>
 <li><p><strong>buffer_hops</strong> (<em>int</em>) – Expand the cluster by this many neighbour hops to create the buffer</p></li>
 </ul>
 </dd>
@@ -191,9 +225,9 @@ If it is, add it. This deals with aromatic ring structures</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
-<li><p><strong>buffer_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms in the buffer region</p></li>
-<li><p><strong>terminal_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
-<li><p><strong>cutoff_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
+<li><p><strong>buffer_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms in the buffer region</p></li>
+<li><p><strong>terminal_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
+<li><p><strong>cutoff_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
 <li><p><strong>total_supplementary_terminal_atoms</strong> (<em>NONE</em>) – atoms added to the buffer to make clusters more physical.
 Example: last atom in the aromnatic ring</p></li>
 </ul>
@@ -215,7 +249,7 @@ Example: last atom in the aromnatic ring</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
-<li><p><strong>qm_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms in the inner QM region</p></li>
+<li><p><strong>qm_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms in the inner QM region</p></li>
 <li><p><strong>buffer_hops</strong> (<em>int</em>) – Expand the cluster by this many neighbour hops to create the buffer</p></li>
 </ul>
 </dd>
@@ -240,7 +274,7 @@ a larger structure</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
-<li><p><strong>select_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms to include in the new structure</p></li>
+<li><p><strong>select_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms to include in the new structure</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -259,8 +293,8 @@ a larger structure</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>terminal_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
-<li><p><strong>cutoff_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
+<li><p><strong>terminal_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
+<li><p><strong>cutoff_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
 <li><p><strong>atomic_cluster</strong> (<em>ase.Atoms</em>) – QM region structure (with core and buffer atoms)</p></li>
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
 </ul>
@@ -279,9 +313,9 @@ If one of these atoms is in the buffer regios, the rest are also added to it.</p
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>specialAtomIndex</strong> (<em>int</em><em> (</em><em>atomic index</em><em>)</em>) – Add a specified atoms to the buffer</p></li>
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
-<li><p><strong>buffer_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms in the buffer region</p></li>
-<li><p><strong>terminal_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
-<li><p><strong>cutoff_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
+<li><p><strong>buffer_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – List of atoms in the buffer region</p></li>
+<li><p><strong>terminal_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
+<li><p><strong>cutoff_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
 </ul>
 </dd>
 </dl>
@@ -309,8 +343,8 @@ given threshold</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>terminal_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
-<li><p><strong>cutoff_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
+<li><p><strong>terminal_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
+<li><p><strong>cutoff_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
 <li><p><strong>atomic_cluster</strong> (<em>ase.Atoms</em>) – QM region structure (with core and buffer atoms)</p></li>
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
 <li><p><strong>atomic_positions</strong> (<em>np.array</em>) – Positions of atoms in the whole structure (copy of the atoms.positions)</p></li>
@@ -326,8 +360,8 @@ given threshold</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>terminal_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
-<li><p><strong>cutoff_atoms_list</strong> (<em>list of ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
+<li><p><strong>terminal_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – last atoms in the buffer region, bonded to the atoms not in the buffer</p></li>
+<li><p><strong>cutoff_atoms_list</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>atomic indexes</em><em>)</em>) – atoms to be changed into hydrogen, first atoms not in the buffer</p></li>
 <li><p><strong>atomic_cluster</strong> (<em>ase.Atoms</em>) – QM region structure (with core and buffer atoms)</p></li>
 <li><p><strong>atoms</strong> (<em>ase.Atoms</em>) – whole structure</p></li>
 <li><p><strong>atomic_positions</strong> (<em>np.array</em>) – Positions of atoms in the whole structure (copy of the atoms.positions)</p></li>

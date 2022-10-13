@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -44,7 +45,43 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">matscipy.calculators.manybody package</a><ul>
 <li><a class="reference internal" href="#modules">Modules</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.manybody.explicit_forms.harmonic">matscipy.calculators.manybody.explicit_forms</a></li>
+<li><a class="reference internal" href="#module-matscipy.calculators.manybody.explicit_forms.harmonic">matscipy.calculators.manybody.explicit_forms</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle"><code class="docutils literal notranslate"><span class="pre">HarmonicAngle</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__abstractmethods__"><code class="docutils literal notranslate"><span class="pre">HarmonicAngle.__abstractmethods__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__call__"><code class="docutils literal notranslate"><span class="pre">HarmonicAngle.__call__()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__init__"><code class="docutils literal notranslate"><span class="pre">HarmonicAngle.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.__module__"><code class="docutils literal notranslate"><span class="pre">HarmonicAngle.__module__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.gradient"><code class="docutils literal notranslate"><span class="pre">HarmonicAngle.gradient()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicAngle.hessian"><code class="docutils literal notranslate"><span class="pre">HarmonicAngle.hessian()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond"><code class="docutils literal notranslate"><span class="pre">HarmonicBond</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond.__abstractmethods__"><code class="docutils literal notranslate"><span class="pre">HarmonicBond.__abstractmethods__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond.__call__"><code class="docutils literal notranslate"><span class="pre">HarmonicBond.__call__()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond.__init__"><code class="docutils literal notranslate"><span class="pre">HarmonicBond.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond.__module__"><code class="docutils literal notranslate"><span class="pre">HarmonicBond.__module__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond.gradient"><code class="docutils literal notranslate"><span class="pre">HarmonicBond.gradient()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.HarmonicBond.hessian"><code class="docutils literal notranslate"><span class="pre">HarmonicBond.hessian()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair"><code class="docutils literal notranslate"><span class="pre">ZeroPair</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair.__abstractmethods__"><code class="docutils literal notranslate"><span class="pre">ZeroPair.__abstractmethods__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair.__call__"><code class="docutils literal notranslate"><span class="pre">ZeroPair.__call__()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair.__module__"><code class="docutils literal notranslate"><span class="pre">ZeroPair.__module__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair.gradient"><code class="docutils literal notranslate"><span class="pre">ZeroPair.gradient()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroPair.hessian"><code class="docutils literal notranslate"><span class="pre">ZeroPair.hessian()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet"><code class="docutils literal notranslate"><span class="pre">ZeroTriplet</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet.__abstractmethods__"><code class="docutils literal notranslate"><span class="pre">ZeroTriplet.__abstractmethods__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet.__call__"><code class="docutils literal notranslate"><span class="pre">ZeroTriplet.__call__()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet.__module__"><code class="docutils literal notranslate"><span class="pre">ZeroTriplet.__module__</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet.gradient"><code class="docutils literal notranslate"><span class="pre">ZeroTriplet.gradient()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.manybody.explicit_forms.harmonic.ZeroTriplet.hessian"><code class="docutils literal notranslate"><span class="pre">ZeroTriplet.hessian()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

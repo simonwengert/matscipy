@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -44,11 +45,124 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">matscipy.fracture_mechanics package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.clusters">matscipy.fracture_mechanics.clusters module</a></li>
-<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.crack">matscipy.fracture_mechanics.crack module</a></li>
+<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.clusters">matscipy.fracture_mechanics.clusters module</a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.clusters.bcc"><code class="docutils literal notranslate"><span class="pre">bcc()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.clusters.cluster"><code class="docutils literal notranslate"><span class="pre">cluster()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.clusters.diamond"><code class="docutils literal notranslate"><span class="pre">diamond()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.clusters.fcc"><code class="docutils literal notranslate"><span class="pre">fcc()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.clusters.sc"><code class="docutils literal notranslate"><span class="pre">sc()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.clusters.set_groups"><code class="docutils literal notranslate"><span class="pre">set_groups()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.clusters.set_regions"><code class="docutils literal notranslate"><span class="pre">set_regions()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.crack">matscipy.fracture_mechanics.crack module</a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.ConstantStrainRate"><code class="docutils literal notranslate"><span class="pre">ConstantStrainRate</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.ConstantStrainRate.adjust_forces"><code class="docutils literal notranslate"><span class="pre">ConstantStrainRate.adjust_forces()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.ConstantStrainRate.adjust_positions"><code class="docutils literal notranslate"><span class="pre">ConstantStrainRate.adjust_positions()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.ConstantStrainRate.apply_strain"><code class="docutils literal notranslate"><span class="pre">ConstantStrainRate.apply_strain()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.ConstantStrainRate.copy"><code class="docutils literal notranslate"><span class="pre">ConstantStrainRate.copy()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.crack_tip_position"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.crack_tip_position()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.crack_tip_position_y"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.crack_tip_position_y()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.deformation_gradient"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.deformation_gradient()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.deformation_gradient_from_cartesian_coordinates"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.deformation_gradient_from_cartesian_coordinates()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.deformation_gradient_from_cylinder_coordinates"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.deformation_gradient_from_cylinder_coordinates()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.displacements"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.displacements()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.displacements_from_cartesian_coordinates"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.displacements_from_cartesian_coordinates()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.displacements_from_cylinder_coordinates"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.displacements_from_cylinder_coordinates()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.k1g"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.k1g()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.k1gsqG"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.k1gsqG()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.scale_displacements"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.scale_displacements()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.stresses"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.stresses()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.stresses_from_cartesian_coordinates"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.stresses_from_cartesian_coordinates()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.CubicCrystalCrack.stresses_from_cylinder_coordinates"><code class="docutils literal notranslate"><span class="pre">CubicCrystalCrack.stresses_from_cylinder_coordinates()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.G_to_strain"><code class="docutils literal notranslate"><span class="pre">G_to_strain()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.IsotropicStressField"><code class="docutils literal notranslate"><span class="pre">IsotropicStressField</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.IsotropicStressField.get_stresses"><code class="docutils literal notranslate"><span class="pre">IsotropicStressField.get_stresses()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.deformation_gradient"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.deformation_gradient()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.displacements"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.displacements()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.k1g"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.k1g()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.k1gsqG"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.k1gsqG()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.rtheta"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.rtheta()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.set_plane_strain"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.set_plane_strain()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.set_plane_stress"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.set_plane_stress()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.RectilinearAnisotropicCrack.stresses"><code class="docutils literal notranslate"><span class="pre">RectilinearAnisotropicCrack.stresses()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack"><code class="docutils literal notranslate"><span class="pre">SinclairCrack</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.animate"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.animate()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.arc_length_continuation"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.arc_length_continuation()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.fit_cle"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.fit_cle()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_crack_tip_force"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.get_crack_tip_force()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_dofs"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.get_dofs()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_forces"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.get_forces()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_k_force"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.get_k_force()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_potential_energy"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.get_potential_energy()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_precon"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.get_precon()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.get_xdot"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.get_xdot()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.optimize"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.optimize()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.pack"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.pack()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.plot"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.plot()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.rescale_k"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.rescale_k()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.set_atoms"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.set_atoms()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.set_dofs"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.set_dofs()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.u_cle"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.u_cle()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.unpack"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.unpack()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.update_atoms"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.update_atoms()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.SinclairCrack.update_precon"><code class="docutils literal notranslate"><span class="pre">SinclairCrack.update_precon()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.deformation_gradient_residual"><code class="docutils literal notranslate"><span class="pre">deformation_gradient_residual()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.deformation_gradient_residuals"><code class="docutils literal notranslate"><span class="pre">deformation_gradient_residuals()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.displacement_residual"><code class="docutils literal notranslate"><span class="pre">displacement_residual()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.displacement_residuals"><code class="docutils literal notranslate"><span class="pre">displacement_residuals()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.find_tip_broken_bonds"><code class="docutils literal notranslate"><span class="pre">find_tip_broken_bonds()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.find_tip_coordination"><code class="docutils literal notranslate"><span class="pre">find_tip_coordination()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.find_tip_stress_field"><code class="docutils literal notranslate"><span class="pre">find_tip_stress_field()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.fit_crack_stress_field"><code class="docutils literal notranslate"><span class="pre">fit_crack_stress_field()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.get_energy_release_rate"><code class="docutils literal notranslate"><span class="pre">get_energy_release_rate()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.get_strain"><code class="docutils literal notranslate"><span class="pre">get_strain()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.get_stress_intensity_factor"><code class="docutils literal notranslate"><span class="pre">get_stress_intensity_factor()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.isotropic_modeI_crack_tip_displacement_field"><code class="docutils literal notranslate"><span class="pre">isotropic_modeI_crack_tip_displacement_field()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.isotropic_modeI_crack_tip_stress_field"><code class="docutils literal notranslate"><span class="pre">isotropic_modeI_crack_tip_stress_field()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.plot_stress_fields"><code class="docutils literal notranslate"><span class="pre">plot_stress_fields()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.print_crack_system"><code class="docutils literal notranslate"><span class="pre">print_crack_system()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.strain_to_G"><code class="docutils literal notranslate"><span class="pre">strain_to_G()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.crack.thin_strip_displacement_y"><code class="docutils literal notranslate"><span class="pre">thin_strip_displacement_y()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-matscipy.fracture_mechanics.crackpathsel">matscipy.fracture_mechanics.crackpathsel module</a></li>
-<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.energy_release">matscipy.fracture_mechanics.energy_release module</a></li>
-<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.idealbrittlesolid">matscipy.fracture_mechanics.idealbrittlesolid module</a></li>
+<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.energy_release">matscipy.fracture_mechanics.energy_release module</a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.energy_release.J_integral"><code class="docutils literal notranslate"><span class="pre">J_integral()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-matscipy.fracture_mechanics.idealbrittlesolid">matscipy.fracture_mechanics.idealbrittlesolid module</a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.calculate"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.calculate()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.default_parameters"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.default_parameters</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.get_elastic_moduli"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.get_elastic_moduli()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.get_poisson_ratio"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.get_poisson_ratio()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.get_wave_speeds"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.get_wave_speeds()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.get_youngs_modulus"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.get_youngs_modulus()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.implemented_properties"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.implemented_properties</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.IdealBrittleSolid.set_reference_crystal"><code class="docutils literal notranslate"><span class="pre">IdealBrittleSolid.set_reference_crystal()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.extend_strip"><code class="docutils literal notranslate"><span class="pre">extend_strip()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.find_crack_tip"><code class="docutils literal notranslate"><span class="pre">find_crack_tip()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.find_triangles_2d"><code class="docutils literal notranslate"><span class="pre">find_triangles_2d()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.set_constraints"><code class="docutils literal notranslate"><span class="pre">set_constraints()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.set_initial_velocities"><code class="docutils literal notranslate"><span class="pre">set_initial_velocities()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.fracture_mechanics.idealbrittlesolid.triangular_lattice_slab"><code class="docutils literal notranslate"><span class="pre">triangular_lattice_slab()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-matscipy.fracture_mechanics">Module contents</a></li>
 </ul>
 </li>
@@ -746,7 +860,7 @@ assuming plane strain in thin strip boundary conditions.</p>
 in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> dictionary. These values are then
 used as starting guesses for subsequent fits.</p>
 </p></li>
-<li><p><strong>r_range</strong> (<em>sequence of two floats</em><em>, </em><em>optional</em>) – If present, restrict the stress fit to an annular region
+<li><p><strong>r_range</strong> (<em>sequence</em><em> of </em><em>two floats</em><em>, </em><em>optional</em>) – If present, restrict the stress fit to an annular region
 <code class="docutils literal notranslate"><span class="pre">r_range[0]</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;</span> <span class="pre">r_range[1]</span></code>, centred on the previous crack
 position (from the <code class="docutils literal notranslate"><span class="pre">CrackPos</span></code> entry in <code class="docutils literal notranslate"><span class="pre">atoms.info</span></code>). If
 r_range is <code class="docutils literal notranslate"><span class="pre">None</span></code>, fit is carried out for all atoms.</p></li>

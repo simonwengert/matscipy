@@ -16,6 +16,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -43,7 +44,56 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">matscipy.calculators.pair_potential package</a><ul>
 <li><a class="reference internal" href="#modules">Modules</a></li>
-<li><a class="reference internal" href="#module-matscipy.calculators.pair_potential.calculator">matscipy.calculators.pair_potential.calculator module</a></li>
+<li><a class="reference internal" href="#module-matscipy.calculators.pair_potential.calculator">matscipy.calculators.pair_potential.calculator module</a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.BeestKramerSanten"><code class="docutils literal notranslate"><span class="pre">BeestKramerSanten</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.BeestKramerSanten.first_derivative"><code class="docutils literal notranslate"><span class="pre">BeestKramerSanten.first_derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.BeestKramerSanten.second_derivative"><code class="docutils literal notranslate"><span class="pre">BeestKramerSanten.second_derivative()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.CutoffInteraction"><code class="docutils literal notranslate"><span class="pre">CutoffInteraction</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.CutoffInteraction.cutoff"><code class="docutils literal notranslate"><span class="pre">CutoffInteraction.cutoff</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.CutoffInteraction.derivative"><code class="docutils literal notranslate"><span class="pre">CutoffInteraction.derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.CutoffInteraction.first_derivative"><code class="docutils literal notranslate"><span class="pre">CutoffInteraction.first_derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.CutoffInteraction.get_cutoff"><code class="docutils literal notranslate"><span class="pre">CutoffInteraction.get_cutoff()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.CutoffInteraction.second_derivative"><code class="docutils literal notranslate"><span class="pre">CutoffInteraction.second_derivative()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut"><code class="docutils literal notranslate"><span class="pre">FeneLJCut</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.first_derivative"><code class="docutils literal notranslate"><span class="pre">FeneLJCut.first_derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.FeneLJCut.second_derivative"><code class="docutils literal notranslate"><span class="pre">FeneLJCut.second_derivative()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJones84"><code class="docutils literal notranslate"><span class="pre">LennardJones84</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.first_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJones84.first_derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJones84.second_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJones84.second_derivative()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut"><code class="docutils literal notranslate"><span class="pre">LennardJonesCut</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.first_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJonesCut.first_derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesCut.second_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJonesCut.second_derivative()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear"><code class="docutils literal notranslate"><span class="pre">LennardJonesLinear</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.first_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJonesLinear.first_derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesLinear.second_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJonesLinear.second_derivative()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic"><code class="docutils literal notranslate"><span class="pre">LennardJonesQuadratic</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.first_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJonesQuadratic.first_derivative()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.LennardJonesQuadratic.second_derivative"><code class="docutils literal notranslate"><span class="pre">LennardJonesQuadratic.second_derivative()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.PairPotential"><code class="docutils literal notranslate"><span class="pre">PairPotential</span></code></a><ul>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.PairPotential.calculate"><code class="docutils literal notranslate"><span class="pre">PairPotential.calculate()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.PairPotential.default_parameters"><code class="docutils literal notranslate"><span class="pre">PairPotential.default_parameters</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.PairPotential.get_hessian"><code class="docutils literal notranslate"><span class="pre">PairPotential.get_hessian()</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.PairPotential.implemented_properties"><code class="docutils literal notranslate"><span class="pre">PairPotential.implemented_properties</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.PairPotential.name"><code class="docutils literal notranslate"><span class="pre">PairPotential.name</span></code></a></li>
+<li><a class="reference internal" href="#matscipy.calculators.pair_potential.calculator.PairPotential.reset"><code class="docutils literal notranslate"><span class="pre">PairPotential.reset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
